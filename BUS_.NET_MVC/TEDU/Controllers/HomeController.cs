@@ -39,7 +39,11 @@ namespace TEDU.Controllers
             ViewBag.Message = string.Empty;
             return View();
         }
-
+        public ActionResult ScheduleAll()
+        {
+            ViewBag.Message = string.Empty;
+            return View();
+        }
         public ActionResult Lookup()
         {
             ViewBag.Message = string.Empty;

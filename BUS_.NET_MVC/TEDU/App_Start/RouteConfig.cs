@@ -14,7 +14,7 @@ namespace TEDU
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
                 name: "Home",
-                url: "Trang-chu/{id}",
+                url: "trang-chu/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 namespaces: new[] { "TEDU.Controllers" }
             );
@@ -35,7 +35,7 @@ namespace TEDU
 
             routes.MapRoute(
                 name: "Schedule",
-                url: "lich-trinh/{id}",
+                url: "chi-tiet-lich-trinh/{id}",
                 defaults: new { controller = "Home", action = "Schedule", id = UrlParameter.Optional },
                 namespaces: new[] { "TEDU.Controllers" }
             );
@@ -53,7 +53,12 @@ namespace TEDU
                 defaults: new { controller = "Home", action = "Lookup", id = UrlParameter.Optional },
                 namespaces: new[] { "TEDU.Controllers" }
             );
-
+            routes.MapRoute(
+                name: "ScheduleAll",
+                url: "lich-trinh/{id}",
+                defaults: new { controller = "Home", action = "ScheduleAll", id = UrlParameter.Optional },
+                namespaces: new[] { "TEDU.Controllers" }
+            );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
