@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "~/Areas/Staff/Views/Shared/_Layout.cshtml";
+}
+
+@model TEDU.Areas.Staff.Models.News
+<!-- CKEditor CDN -->
+<script src="https://cdn.ckeditor.com/4.22.0/standard/ckeditor.js"></script>
+
+
+<div class="edit-news-container">
+    <h3>Chỉnh sửa tin tức</h3>
+    <form asp-action="UpdateNews" method="post">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group">
+            <label for="Title">Tiêu đề</label>
+            <input type="text" asp-for="Title" class="form-control" id="Title" required />
+        </div>
+
+        <div class="form-group">
+            <label for="Content">Nội dung</label>
+            <textarea asp-for="Content" class="form-control" id="Content" rows="10"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="PublishedDate">Ngày xuất bản</label>
+            <input type="datetime-local" asp-for="PublishedDate" class="form-control" id="PublishedDate" required />
+        </div>
+
+        <div class="d-grid gap-2 mt-3">
+            <a href="" class="btn btn-success">Lưu</a>
+            <a href="@Url.Action("Index", "News")" class="btn btn-outline-warning">Hủy</a>
+        </div>
+    </form>
+</div>
+
+<!-- CKEditor Script -->
+<script>
+    // Thêm CKEditor vào textarea
+    CKEDITOR.replace('Content');
+
+    function closeEdit() {
+        // Code đóng form chỉnh sửa, có thể là ẩn modal hoặc redirect lại trang chính
+    }
+</script>
+
+
+
+
+

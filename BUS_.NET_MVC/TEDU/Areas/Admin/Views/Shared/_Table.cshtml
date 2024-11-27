@@ -1,0 +1,439 @@
+﻿<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3 d-flex align-items-center justify-content-between">
+        <h6 class="m-0 font-weight-bold text-primary">Dữ liệu</h6>
+        <div class="form-inline">
+            @if (ViewBag.PageType == "Trip" || ViewBag.PageType == "Route" || ViewBag.PageType == "Ticket")
+            {
+                <!-- Dropdown chọn tuyến -->
+                <select id="routeSelect" class="form-control mr-3">
+                    <option value="">Chọn tuyến</option>
+                    @foreach (var route in ViewBag.Routes as List<RouteInfo>)
+                    {
+                        <option value="@route.Id">@route.Departure - @route.Destionation</option>
+                    }
+                </select>
+
+                <!-- Dropdown chọn chuyến (ban đầu sẽ rỗng) -->
+                <select id="tripSelect" class="form-control">
+                    <option value="">Chọn chuyến</option>
+                </select>
+            }
+        </div>
+        @{
+            string actionUrl = "#";
+
+            switch (ViewBag.PageType as string)
+            {
+                case "Route":
+                    actionUrl = Url.Action("Create", "Route");
+                    break;
+                case "Trip":
+                    actionUrl = Url.Action("Create", "Trip");
+                    break;
+                case "Ticket":
+                    actionUrl = Url.Action("Create", "Ticket");
+                    break;
+                case "TicketStaff":
+                    actionUrl = Url.Action("Create", "TicketStaff");
+                    break;
+                case "Driver":
+                    actionUrl = Url.Action("Create", "Driver");
+                    break;
+                case "CoDriver":
+                    actionUrl = Url.Action("Create", "CoDriver");
+                    break;
+            }
+        }
+
+
+        @if (ViewBag.PageType == "Route")
+        {
+            <a href="@Url.Action("CreateRoute", "Route")" class="btn btn-primary btn-icon-split">
+                <span class="icon text-white-100">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Thêm</span>
+            </a>
+        }
+        else if (ViewBag.PageType == "Bus")
+        {
+            //var firstBus = (Model as List<Bus>)[0];
+            <a href="@Url.Action("CreateBus", "Bus")" class="btn btn-primary btn-icon-split">
+                <span class="icon text-white-100">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Thêm</span>
+            </a>
+        }
+        else if (ViewBag.PageType == "Trip")
+        {
+
+            <a href="@Url.Action("Create", "Trip")" class="btn btn-primary btn-icon-split">
+                <span class="icon text-white-100">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Thêm</span>
+            </a>
+        }
+        else if (ViewBag.PageType == "Driver")
+        {
+
+            <a href="@Url.Action("Create", "Driver")" class="btn btn-primary btn-icon-split">
+                <span class="icon text-white-100">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Thêm</span>
+            </a>
+        }
+        else if (ViewBag.PageType == "CoDriver")
+        {
+
+            <a href="@Url.Action("Create", "CoDriver")" class="btn btn-primary btn-icon-split">
+                <span class="icon text-white-100">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Thêm</span>
+            </a>
+        }
+        else if (ViewBag.PageType == "Ticket")
+        {
+
+            <a href="@Url.Action("Create", "Ticket")" class="btn btn-primary btn-icon-split">
+                <span class="icon text-white-100">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Thêm</span>
+            </a>
+        }
+
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        @foreach (var header in ViewBag.Headers as List<string>)
+                        {
+                            <th>@header</th>
+                        }
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        @foreach (var footer in ViewBag.Headers as List<string>)
+                        {
+                            <th>@footer</th>
+                        }
+                        <th>Hành động</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @using TEDU.Areas.Admin.Models
+                    @if (ViewBag.PageType == "Route")
+                    {
+                        @*@model IEnumerable<TEDU.Areas.Admin.Models.RouteInfo>*@
+
+
+                        foreach (var data in Model as List<RouteInfo>)
+                        {
+                            <tr>
+                                <td>@data.Id</td>
+                                <td>@data.Departure</td>
+                                <td>@data.Destionation</td>
+                                <td>@data.Distance</td>
+                                <td>@data.Duration</td>
+                                <td>@data.Price</td>
+                                <td>@data.Available</td>
+                                <td>
+                                    <a href="@Url.Action("GetTripsByRouteId", "Trip" , new { routeId = data.Id })" class="btn btn-outline-info">
+                                        Quản lý chuyến xe
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("GetBusesByRouteId", "Bus" , new { routeId = data.Id })" class="btn btn-outline-info">
+                                        Quản lý xe
+                                    </a>
+                                </td>
+                                <td class="d-flex justify-content-around">
+                                    <a href="@Url.Action("UpdateRoute", "Route", new { id = data.Id })" class="btn btn-outline-info">
+                                        <i class="fas fa-wrench"></i>
+                                    </a>
+                                    <a href="@Url.Action("DeleteRoute", "Route", new { id = data.Id })" class="btn btn-outline-danger">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </a>
+
+                                </td>
+                            </tr>
+                        }
+
+                    }
+                    else if (ViewBag.PageType == "Bus")
+                    {
+
+                        foreach (var data in Model as List<Bus>)
+                        {
+                            <tr>
+                                <td>@data.BusRouteId</td>
+                                <td>@data.Id</td>
+                                <td>@data.BusNumber</td>
+                                <td>@data.BeginDate</td>
+                                <td>@data.Status</td>
+                                <td class="d-flex justify-content-around">
+                                    <a href="@Url.Action("UpdateBus", "Bus", new { id = data.Id })" class="btn btn-outline-info">
+                                        <i class="fas fa-wrench"></i>
+                                    </a>
+                                    <a href="@Url.Action("DeleteBus", "Bus", new { id = data.Id })" class="btn btn-outline-danger">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+                        }
+                    }
+                    else if (ViewBag.PageType == "Trip")
+                    {
+
+                        foreach (var data in Model as List<Trip>)
+                        {
+                            <tr>
+                                <td>@data.BusRouteId</td>
+                                <td>@data.Id</td>
+                                <td>@data.BusNumber</td>
+                                <td>@data.DepartureDate</td>
+                                <td>@data.Duration</td>
+                                <td>@data.EndTime</td>
+                                <td>@data.DriverName</td>
+                                <td>@data.CoDriverName</td>
+                                <td>@data.Status</td>
+                                <td class="d-flex justify-content-around">
+                                    @if (data.Status == "Chưa chạy")
+                                    {
+                                        <a href="@Url.Action("Update", "Trip", new { id = data.Id })" class="btn btn-outline-info">
+                                            <i class="fas fa-wrench"></i>
+                                        </a>
+                                        <a href="@Url.Action("Delete", "Trip", new { id = data.Id })" class="btn btn-outline-danger">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <button class="btn btn-outline-secondary" disabled title="Chuyến đi đã bắt đầu hoặc kết thúc">
+                                            <i class="fas fa-ban"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary" disabled title="Chuyến đi đã bắt đầu hoặc kết thúc">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    }
+
+                                    @*<a href="@Url.Action("CreateTrip", "Trip", new { routeId = data.BusRouteId })" class="btn btn-outline-danger">
+            <i class="fa-solid fa-circle-plus"></i>
+        </a>*@
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else if (ViewBag.PageType == "Ticket")
+                    {
+                        foreach (var data in Model as List<Ticket>)
+                        {
+                            <tr>
+                                <td>@data.Id</td>
+                                <td>@data.TripId</td>
+                                <td>@data.CreateDate</td>
+                                <td>@data.CustomerName</td>
+                                <td>@data.CustomerPhone</td>
+                                <td>@data.CustomerEmail</td>
+                                <td>@data.SeatNames1</td>
+                                <td>@data.CreateDate.ToString("dd/MM/yyyy HH:mm")</td>
+                                <td>@data.Status</td>
+
+                                <td class="d-flex justify-content-between">
+                                    <a href="@Url.Action("Edit", "Ticket", new { id = data.Id })" class="btn btn-outline-info">
+                                        <i class="fas fa-wrench"></i>
+                                    </a>
+                                    <a href="@Url.Action("Delete", "Ticket", new { id = data.Id })" class="btn btn-outline-danger">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else if (ViewBag.PageType == "Driver")
+                    {
+                        foreach (var data in Model as List<Driver>)
+                        {
+                            <tr>
+                                <td>@data.BusRouteId</td>
+                                <td>@data.Id</td>
+                                <td>@data.Name</td>
+                                <td>@data.BirthDate</td>
+                                <td>@data.PhoneNumber</td>
+                                <td>@data.Image</td>
+                                <td>@data.Role</td>
+                                <td>@data.Status</td>
+                                <td>@data.LicenseNumber</td>
+                                <td>@data.ExperienceYear</td>
+                                <td class="d-flex justify-content-around">
+                                    <a href="@Url.Action("Update", "Driver", new { id = data.Id })" class="btn btn-outline-info">
+                                        <i class="fas fa-wrench"></i>
+                                    </a>
+                                    <a href="@Url.Action("Delete", "Driver", new { id = data.Id })" class="btn btn-outline-danger">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else if (ViewBag.PageType == "CoDriver")
+                    {
+                        foreach (var data in Model as List<CoDriver>)
+                        {
+                            <tr>
+                                <td>@data.BusRouteId</td>
+                                <td>@data.Id</td>
+                                <td>@data.Name</td>
+                                <td>@data.BirthDate</td>
+                                <td>@data.PhoneNumber</td>
+                                <td>@data.Image</td>
+                                <td>@data.Role</td>
+                                <td>@data.Status</td>
+                                <td>@data.LicenseNumber</td>
+                                <td>@data.ExperienceYear</td>
+                                <td class="d-flex justify-content-around">
+                                    <a href="@Url.Action("Update", "CoDriver", new { id = data.Id })" class="btn btn-outline-info">
+                                        <i class="fas fa-wrench"></i>
+                                    </a>
+                                    <a href="@Url.Action("Delete", "CoDriver", new { id = data.Id })" class="btn btn-outline-danger">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    @*else if (ViewBag.PageType == "TicketStaff")
+                        {
+                            foreach (var data in ViewBag.Data as List<TicketStaff>)
+                            {
+                                <tr>
+                                    <td>@data.EmployeeId</td>
+                                    <td>@data.FullName</td>
+                                    <td>@data.DateOfBirth</td>
+                                    <td>@data.PhoneNumber</td>
+                                    <td>@data.Email</td>
+                                    <td>@data.password</td>
+                                    <td>@data.Role</td>
+                                    <td>
+                                        <a href="@Url.Action("Edit", "TicketStaff")" class="btn btn-outline-info">
+                                            <i class="fas fa-wrench"></i>
+                                        </a>
+                                        <button class="btn btn-outline-danger">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        }*@
+                    @*else if (ViewBag.PageType == "Contact")
+                        {
+                            foreach (var data in ViewBag.Data as List<Contact>)
+                            {
+                                <tr>
+                                    <td>@data.ContactId</td>
+                                    <td>@data.CustomerName</td>
+                                    <td>@data.Email</td>
+                                    <td>@data.Phone</td>
+                                    <td>@data.Message</td>
+                                    <td>@data.SentDate</td>
+                                    <td class="d-flex justify-content-around">
+                                        <a href="@Url.Action("Reply", "Contact")" class="btn btn-outline-info">
+                                            <i class="fas fa-comment-dots"></i>
+                                        </a>
+                                        <button class="btn btn-outline-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        }*@
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        // Khi chọn tuyến, gửi yêu cầu Ajax để lấy danh sách chuyến
+        $('#routeSelect').change(function () {
+            var routeId = $(this).val();
+
+            if (routeId) {
+                $.ajax({
+                    url: '@Url.Action("GetTripsByRouteId_Ver2", "Trip")',
+                    data: { routeId: routeId },
+                    success: function (data) {
+                        // Cập nhật dropdown chuyến với các chuyến xe tương ứng
+                        var tripSelect = $('#tripSelect');
+                        tripSelect.empty(); // Xóa các mục cũ
+                        tripSelect.append('<option value="">Chọn chuyến</option>'); // Thêm mục mặc định
+
+                        $.each(data, function (index, trip) {
+                            tripSelect.append('<option value="' + trip.Id + '">' + trip.BusNumber + ' - ' + trip.DepartureDate + '</option>');
+                        });
+
+                        // Sau khi chọn tuyến, có thể tự động cập nhật bảng dữ liệu nếu cần.
+                        updateTable(routeId);  // Hàm này sẽ được viết để cập nhật bảng.
+                    }
+                });
+            } else {
+                // Nếu không có tuyến được chọn, xóa các chuyến
+                $('#tripSelect').empty().append('<option value="">Chọn chuyến</option>');
+            }
+        });
+
+        // Khi chọn chuyến, cập nhật bảng
+        $('#tripSelect').change(function () {
+            var routeId = $('#routeSelect').val();
+            var tripId = $(this).val();
+            updateTable(routeId, tripId);  // Hàm này sẽ cập nhật bảng theo các tham số.
+        });
+
+        function updateTable(routeId, tripId = null) {
+            // Gửi yêu cầu Ajax để lấy dữ liệu bảng mới
+            $.ajax({
+                url: '@Url.Action("GetDataForTable", "Trip")',  // Controller action bạn muốn gọi
+                data: {
+                    routeId: routeId,
+                    tripId: tripId
+                },
+                success: function (data) {
+                    // Cập nhật bảng với dữ liệu mới
+                    var tableBody = $('#dataTable tbody');
+                    tableBody.empty(); // Xóa các hàng cũ
+
+                    // Duyệt qua dữ liệu và thêm vào bảng
+                    $.each(data, function (index, row) {
+                        var rowHtml = '<tr>';
+                        rowHtml += '<td>' + row.BusRouteId + '</td>';
+                        rowHtml += '<td>' + row.Id + '</td>';
+                        rowHtml += '<td>' + row.BusNumber + '</td>';
+                        rowHtml += '<td>' + row.DepartureDate + '</td>';
+                        rowHtml += '<td>' + row.Duration + '</td>';
+                        rowHtml += '<td>' + row.EndTime + '</td>';
+                        //rowHtml += '<td>' + row.DriverName + '</td>';
+                        //rowHtml += '<td>' + row.CoDriverName + '</td>';
+                        rowHtml += '<td>' + row.Status + '</td>';
+                        rowHtml += '<td class="d-flex justify-content-around">';
+                        rowHtml += '<a href="@Url.Action("Update", "Trip")" class="btn btn-outline-info"><i class="fas fa-wrench"></i></a>';
+                        rowHtml += '<a href="@Url.Action("Delete", "Trip")" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></a>';
+                        rowHtml += '</td>';
+                        rowHtml += '</tr>';
+
+                        tableBody.append(rowHtml);
+                    });
+                }
+            });
+        }
+    });
+</script>

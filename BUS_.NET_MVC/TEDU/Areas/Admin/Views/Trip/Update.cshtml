@@ -1,0 +1,177 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@model TEDU.Areas.Admin.Models.Trip
+
+@{
+    ViewBag.Title = "Update Trip";
+}
+@using (Html.BeginForm("Update", "Trip", FormMethod.Post))
+{
+
+    <div class="container">
+        <h4>Sửa thông tin chuyến xe</h4>
+
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label for="RouteId">Id của Route</label>
+            <input type="number" class="form-control" id="BusRouteId" name="BusRouteId" value="@Model.BusRouteId" required />
+        </div>
+        <div class="form-group">
+            <label for="DepartureDateTime">Departure Date Time</label>
+            <input type="datetime-local" class="form-control" id="DepartureDate" name="DepartureDate" value="@Model.DepartureDate.ToString("yyyy-MM-ddTHH:mm")" required />
+        </div>
+        <div class="form-group">
+            <label for="BusId">Chọn xe buýt</label>
+            <select class="form-control" id="BusId" name="BusId" value="@Model.BusId" required>
+                <option value="">-- Chọn xe --</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="DriverId">Tài xế </label>
+            <select class="form-control" id="DriverId" name="DriverId" required>
+                <option value="">-- Chọn tài xế --</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="CoDriverId">Phụ lái</label>
+            <select class="form-control" id="CoDriverId" name="CoDriverId" required>
+                <option value="">-- Chọn phụ lái --</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Status">Status</label>
+            <input type="text" class="form-control" id="Status" name="Status" value="@Model.Status" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-user btn-block">Sửa thông tin tuyến xe</button>
+        <a href="@Url.Action("Index", "Trip")" class="btn btn-secondary btn-user btn-block">Quay lại</a>
+    </div>
+}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+@*Danh sách bus thay đổi theo người dùng chọn route Id*@
+<script>
+    $(document).ready(function () {
+        $('#BusRouteId, #DepartureDate').change(function () {
+            var routeId = $('#BusRouteId').val();
+            var departureDate = $('#DepartureDate').val();
+
+            if (routeId && departureDate) {
+                loadBuses(routeId, departureDate);
+            } else {
+                $('#BusId').empty();
+                $('#BusId').append('<option value="">-- Chọn xe --</option>');
+            }
+        });
+
+        var routeId = $('#BusRouteId').val();
+        var departureDate = $('#DepartureDate').val();
+
+        if (routeId && departureDate) {
+            loadBuses(routeId, departureDate);
+        }
+    });
+
+    function loadBuses(routeId, departureDate) {
+        $('#BusId').empty();
+        $('#BusId').append('<option value="">-- Đang tải xe --</option>');
+
+        $.ajax({
+            url: '@Url.Action("GetBusesByRouteAndDeparture", "Bus")',
+            type: 'GET',
+            data: { routeId: routeId, departureDate: departureDate },
+            success: function (data) {
+                $('#BusId').empty();
+                if (data.success) {
+                    $('#BusId').append('<option value="">-- Chọn xe --</option>');
+
+                    $.each(data.buses, function (index, bus) {
+                        var isSelected = bus.Id === @Model.BusId ? "selected" : "";
+                        $('#BusId').append('<option value="' + bus.Id + '" ' + isSelected + '>' + bus.BusNumber + '</option>');
+                    });
+                } else {
+                    $('#BusId').append('<option value="">-- Không có xe --</option>');
+                    alert(data.message);
+                }
+            },
+            error: function () {
+                alert("Không thể tải danh sách xe. Vui lòng thử lại sau.");
+                $('#BusId').empty();
+                $('#BusId').append('<option value="">-- Không tải được --</option>');
+            }
+        });
+        $.ajax({
+            url: '@Url.Action("GetDriversByRouteAndDeparture", "Driver")',
+            data: { routeId: routeId, departureDate: departureDate },
+            type: 'GET',
+            success: function (data) {
+                if (data.success) {
+                    $('#DriverId').empty();
+                    $('#DriverId').append('<option value="">-- Chọn tài xế --</option>');
+
+                    if (data.drivers && data.drivers.length > 0) {
+                        $.each(data.drivers, function (index, driver) {
+                            $('#DriverId').append('<option value="' + driver.Id + '">' + driver.Name + '</option>');
+                        });
+                    } else {
+                        alert("Không tìm thấy tài xế phù hợp.");
+                    }
+                } else {
+                    $('#BusId').append('<option value="">-- Không có tài xế --</option>');
+                    alert(data.message || "Đã xảy ra lỗi khi tải danh sách tài xế.");
+                }
+            },
+            error: function () {
+                alert("Không thể tải danh sách tài xế.");
+            }
+        });
+        $.ajax({
+            url: '@Url.Action("GetCoDriversByRouteAndDeparture", "CoDriver")',
+            data: { routeId: routeId, departureDate: departureDate },
+            type: 'GET',
+            success: function (data) {
+                if (data.success) {
+                    $('#CoDriverId').empty();
+                    $('#CoDriverId').append('<option value="">-- Chọn phụ lái --</option>');
+
+                    if (data.codrivers && data.codrivers.length > 0) {
+                        $.each(data.codrivers, function (index, codriver) {
+                            $('#CoDriverId').append('<option value="' + codriver.Id + '">' + codriver.Name + '</option>');
+                        });
+                    } else {
+                        alert("Không tìm thấy phụ lái phù hợp.");
+                    }
+                } else {
+                    $('#BusId').append('<option value="">-- Không có phụ lái --</option>');
+                    alert(data.message || "Đã xảy ra lỗi khi tải danh sách phụ lái.");
+                }
+            },
+            error: function () {
+                alert("Không thể tải danh sách phụ lái.");
+            }
+        });
+    }
+</script>
+
+@*Không thể tạo chuyến xe trước hiện tại nha*@
+<script>
+    function setMinDateTime() {
+        var currentDate = new Date();
+        var year = currentDate.getFullYear();
+        var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+        var day = currentDate.getDate().toString().padStart(2, '0');
+        var hours = currentDate.getHours().toString().padStart(2, '0');
+        var minutes = currentDate.getMinutes().toString().padStart(2, '0');
+        var minDateTime = year + '-' + month + '-' + day + 'T' + hours + ':' + minutes;
+        $('#DepartureDate').attr('min', minDateTime);
+    }
+
+    $(document).ready(function () {
+        setMinDateTime();
+        $('#DepartureDate').on('input', function () {
+            setMinDateTime();
+        });
+    });
+</script>

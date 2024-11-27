@@ -1,0 +1,18 @@
+﻿@model TEDU.Areas.Admin.Models.CoDriver
+
+<h2>Xóa phụ lái</h2>
+<p>Bạn có chắc chắn muốn xóa phụ lái này không?</p>
+
+<div>
+    <strong>Mã phụ lái: </strong> @Model.Id<br />
+    <strong>Tên phụ lái: </strong> @Model.Name<br />
+    <strong>Mã tuyến: </strong> @Model.BusRouteId <br />
+</div>
+
+@using (Html.BeginForm("DeleteCoDriverConfirmed", "CoDriver", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a href="@Url.Action("GetCoDriversByRouteId", "CoDriver", new {routeId = @Model.BusRouteId})" class="btn btn-secondary">Hủy</a>
+}

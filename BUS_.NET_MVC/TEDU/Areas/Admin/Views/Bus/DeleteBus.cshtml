@@ -1,0 +1,18 @@
+﻿@model TEDU.Areas.Admin.Models.Bus
+
+<h2>Xóa xe</h2>
+<p>Bạn có chắc chắn muốn xóa xe này không?</p>
+
+<div>
+    <strong>Mã xe: </strong> @Model.Id<br />
+    <strong>Số xe: </strong> @Model.BusNumber<br />
+    <strong>Mã tuyến: </strong> @Model.BusRouteId <br />
+</div>
+
+@using (Html.BeginForm("DeleteBusConfirmed", "Bus", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a href="@Url.Action("GetBusesByRouteId", "Bus", new {routeId = @Model.BusRouteId})" class="btn btn-secondary">Hủy</a>
+}

@@ -1,0 +1,594 @@
+﻿
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- Header Start -->
+<div class="container-fluid header bg-white p-0">
+    <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+        <div class="col-md-6 p-5 mt-lg-5">
+            <h1 class="display-5 animated fadeIn mb-4"> <span class="text-primary">Niềm tin</span> trên từng chặng đường</h1>
+            <p class="animated fadeIn mb-4 pb-2">Chúng tôi rất hân hạnh được phục vụ quý khách. Cảm ơn quý khách đã tin tưởng và lựa chọn dịch vụ của chúng tôi.</p>
+            <a href="" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Đặt vé ngay</a>
+        </div>
+        <div class="col-md-6 animated fadeIn">
+            <div class="owl-carousel header-carousel">
+                <div class="owl-carousel-item">
+                    <img class="img-fluid" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnhiErwl_cecSf32C1vhwDVkJzPuUcbJExApc4I6rENr8VKSOzlzhA1yHeMx15RqbK_zQis0m5BBj-C5BTIlRKAo-5y-rcEyIE2WMauqJIJFaCg0HIK2TuPqqOW-4Fj_5i_ipb0gt-wMg/s640/xe-bus-2-tang-city-tour-sai-gon-mgm-travel-6.jpg" alt="">
+                </div>
+                <div class="owl-carousel-item">
+                    <img class="img-fluid" src="https://www.traveloffpath.com/wp-content/uploads/2023/03/Bus-traveling-on-the-asphalt-road-in-rural-landscape-at-sunset1.jpg.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
+    <div class="container">
+        <!-- Hàng ngang chứa các ô nhập liệu -->
+        <div class="row g-2 justify-content-center">
+            <div class="col-md-4">
+                <input type="text" class="form-control border-2 py-3" placeholder="Điểm đi">
+            </div>
+            <div class="col-md-1 d-flex justify-content-center align-items-center">
+                <button class="btn border-0">
+                    <i class="bi bi-arrow-left-right fa-2x text-white"></i>
+                </button>
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control border-2 py-3" placeholder="Điểm đến">
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control border-2 py-3 datetimepicker-input" placeholder="Chọn ngày đi" id="dayTo" />
+            </div>
+        </div>
+        <!-- Nút Search nằm ở giữa phía dưới -->
+        <div class="row mt-3 justify-content-center">
+            <div class="col-md-4">
+                <button class="btn btn-dark border-0 w-100 py-3">Tìm kiếm </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Search End -->
+<!-- Category Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">Lịch trình</h1>
+            <p>Các điểm xuất phát phổ biến</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <a class="cat-item d-block bg-light text-center rounded p-3" href="#" data-location="TP.Hồ Chí Minh">
+                    <div class="rounded p-4">
+                        <div class="icon mb-3">
+                            <img class="img-fluid" src="~/Content/img/icon-apartment.png" alt="Icon">
+                        </div>
+                        <h6>TP.Hồ Chí Minh</h6>
+                        <span>123 Tuyến</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <div class="rounded p-4">
+                        <div class="icon mb-3">
+                            <img class="img-fluid" src="~/Content/img/icon-villa.png" alt="Icon">
+                        </div>
+                        <h6>Đà Nẵng</h6>
+                        <span>123 Tuyến</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <div class="rounded p-4">
+                        <div class="icon mb-3">
+                            <img class="img-fluid" src="~/Content/img/icon-house.png" alt="Icon">
+                        </div>
+                        <h6>Vũng Tàu</h6>
+                        <span>123 Tuyến</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <div class="rounded p-4">
+                        <div class="icon mb-3">
+                            <img class="img-fluid" src="~/Content/img/icon-housing.png" alt="Icon">
+                        </div>
+                        <h6>Đà Lạt</h6>
+                        <span>123 Tuyến</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <div class="rounded p-4">
+                        <div class="icon mb-3">
+                            <img class="img-fluid" src="~/Content/img/icon-building.png" alt="Icon">
+                        </div>
+                        <h6>Bình Dương</h6>
+                        <span>123 Tuyến</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <div class="rounded p-4">
+                        <div class="icon mb-3">
+                            <img class="img-fluid" src="~/Content/img/icon-neighborhood.png" alt="Icon">
+                        </div>
+                        <h6>An Giang</h6>
+                        <span>123 Tuyến</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <div class="rounded p-4">
+                        <div class="icon mb-3">
+                            <img class="img-fluid" src="~/Content/img/icon-condominium.png" alt="Icon">
+                        </div>
+                        <h6>Cần Thơ</h6>
+                        <span>123 Tuyến</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                    <div class="rounded p-4">
+                        <div class="icon mb-3">
+                            <img class="img-fluid" src="~/Content/img/icon-luxury.png" alt="Icon">
+                        </div>
+                        <h6>Bình Định</h6>
+                        <span>123 Tuyến</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Category End -->
+<!-- About Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                    <img class="img-fluid w-100" src="https://icdn.dantri.com.vn/2021/04/28/ubnd-tp-1619582754877.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <h1 class="mb-4">Top 1 địa điểm xuất phát phổ biến</h1>
+                <p class="mb-4">
+                    Thành phố Hồ Chí Minh (còn được gọi là Sài Gòn) là thành phố lớn nhất Việt Nam và là một siêu đô thị trong tương lai gần.
+                    Đây còn là trung tâm kinh tế, giải trí, một trong hai trung tâm văn hóa và giáo dục quan trọng tại Việt Nam.
+                </p>
+                <p><i class="fa fa-check text-primary me-3"></i>Trung tâm kinh tế lớn nhất của VN</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Là nơi giao thoa của nhiều nền văn hóa và cộng đồng khác nhau</p>
+                <p><i class="fa fa-check text-primary me-3"></i>Có sự kết hợp giữa các công trình hiện đại và di tích lịch sử quan trọng.</p>
+                <a class="btn btn-primary py-3 px-5 mt-3" href="">Xem thêm</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+<!-- Property List Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-0 gx-5 align-items-end">
+            <div class="col-lg-6">
+                <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
+                    <h1 class="mb-3">Tuyến phổ biến</h1>
+                    <p>Các tuyến xe phổ biến được khách hàng tin tưởng và lựa chọn</p>
+                </div>
+            </div>
+            <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
+                <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
+                    <li class="nav-item me-2">
+                        <a class="btn btn-outline-primary active" data-bs-toggle="pill" href="#tab-1">Phổ biến</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-2">Mới</a>
+                    </li>
+                    <li class="nav-item me-0">
+                        <a class="btn btn-outline-primary" data-bs-toggle="pill" href="#tab-3">Nước ngoài</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div id="tab-1" class="tab-pane fade show p-0 active">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="https://thumbs.dreamstime.com/b/dalat-vietnam-march-doha-cafe-lam-vien-square-dalat-sunset-vietnam-lam-vien-square-dalat-119562179.jpg" alt=""></a>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Limousine</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">105,000đ</h5>
+                                <a class="d-block h5 mb-2" href="">TP.HCM - Đà Lạt</a>
+                                <p><i class="fa fa-clock text-primary me-2"></i>100km - 3 giờ - 16/09/2024</p>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>BX. An Sương</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="https://bazantravel.com/cdn/medias/uploads/91/91804-tay-bo-da-son-tour-du-lich-tay-ninh-1-ngay-tet-nguyen-dan-670x446.jpg" alt=""></a>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Limousine</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">105,000đ</h5>
+                                <a class="d-block h5 mb-2" href="">TP.HCM - Tây Ninh</a>
+                                <p><i class="fa fa-clock text-primary me-2"></i>100km - 3 giờ - 16/09/2024</p>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>BX. An Sương</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="https://th.bing.com/th/id/R.b88d403943a27df4b4cdbfb3d155e28b?rik=QijEN%2fzf3PumCQ&riu=http%3a%2f%2fdiamondbayhotel.com%2fFileStorage%2fMedia%2fVideo%2fThumbnail%2fnha-trang.jpg&ehk=4cldn6HpSAWWfDxxqHXc9nnBDRkARkGuxu00BLfJgLc%3d&risl=&pid=ImgRaw&r=0" alt=""></a>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Limousine</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">365,000đ</h5>
+                                <a class="d-block h5 mb-2" href="">TP.HCM - Nha Trang</a>
+                                <p><i class="fa fa-clock text-primary me-2"></i>305km - 8 giờ - 15/09/2024</p>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>BX. Miền Tây</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="https://aulacviet.vn/wp-content/uploads/2021/07/Quy-nhon-Phu-Yen.jpg" alt=""></a>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Limousine</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">365,000đ</h5>
+                                <a class="d-block h5 mb-2" href="">Đà Nẵng - Quy Nhơn</a>
+                                <p><i class="fa fa-clock text-primary me-2"></i>305km - 8 giờ - 15/09/2024</p>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>BX. Miền Tây</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="https://media.mia.vn/uploads/blog-du-lich/cho-chuyen-di-them-dang-nho-voi-cac-phuong-tien-di-chuyen-tu-tp-hcm-den-vung-tau-tien-loi-1634623422.jpg" alt=""></a>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Limousine</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">365,000đ</h5>
+                                <a class="d-block h5 mb-2" href="">Cần Thơ - Vũng Tàu</a>
+                                <p><i class="fa fa-clock text-primary me-2"></i>305km - 8 giờ - 15/09/2024</p>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>BX. Miền Tây</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="https://aulacviet.vn/wp-content/uploads/2021/07/Quy-nhon-Phu-Yen.jpg" alt=""></a>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Limousine</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">365,000đ</h5>
+                                <a class="d-block h5 mb-2" href="">Nha Trang - Daklak</a>
+                                <p><i class="fa fa-clock text-primary me-2"></i>305km - 8 giờ - 15/09/2024</p>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>BX. Miền Tây</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <a class="btn btn-primary py-3 px-5" href="">Xem thêm các chuyến khác</a>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-2" class="tab-pane fade show p-0">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="~/Content/img/property-1.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="~/Content/img/property-2.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Villa</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="~/Content/img/property-3.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="~/Content/img/property-4.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Building</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="~/Content/img/property-5.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Home</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="~/Content/img/property-6.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Shop</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-3" class="tab-pane fade show p-0">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="~/Content/img/property-1.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="~/Content/img/property-2.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Villa</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="~/Content/img/property-3.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="~/Content/img/property-4.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Building</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="~/Content/img/property-5.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Home</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <a href=""><img class="img-fluid" src="~/Content/img/property-6.jpg" alt=""></a>
+                                <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Shop</div>
+                            </div>
+                            <div class="p-4 pb-0">
+                                <h5 class="text-primary mb-3">$12,345</h5>
+                                <a class="d-block h5 mb-2" href="">Golden Urban House For Sell</a>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i>123 Street, New York, USA</p>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
+                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="flex-fill text-center py-2"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <a class="btn btn-primary py-3 px-5" href="">Browse More Property</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Property List End -->
+<!-- Call to Action Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="bg-light rounded p-3">
+            <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <img class="img-fluid rounded w-100" src="https://th.bing.com/th/id/R.5cf461d752256d8b4c4ca8cbdc8462e8?rik=r8KySyHcu39ogg&riu=http%3a%2f%2fwww.wazzup.ph%2fwp-content%2fuploads%2f2020%2f03%2fFord-CRC.jpg&ehk=IgXtcJt9l9vn8QIRg94f9GzaaBUNW%2b3qZD44qjFmWJE%3d&risl=&pid=ImgRaw&r=0" alt="">
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="mb-4">
+                            <h1 class="mb-3">Liên hệ với chúng tôi</h1>
+                            <p>Quý hành khách có thể liên hệ với chúng tôi qua số điện thoại hoặc Email bên dưới</p>
+                        </div>
+                        <a href="" class="btn btn-primary py-3 px-4 me-2"><i class="fa fa-phone-alt me-2"></i>Gọi điện</a>
+                        <a href="" class="btn btn-dark py-3 px-4"><i class="fa fa-envelope me-2"></i>Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Tìm chuyến xe</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="@Url.Action("Search", "Home")" method="post">
+                    <div class="mb-3">
+                        <label for="departure" class="form-label">Điểm xuất phát</label>
+                        <input type="text" class="form-control" id="departure" name="departure" placeholder="Nhập điểm xuất phát">
+                    </div>
+                    <div class="mb-3">
+                        <label for="destination" class="form-label">Điểm đến</label>
+                        <input type="text" class="form-control" id="destination" name="destination" placeholder="Nhập điểm đến">
+                    </div>
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Ngày đi</label>
+                        <input type="date" class="form-control" id="date" name="date">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Tìm chuyến xe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action End -->

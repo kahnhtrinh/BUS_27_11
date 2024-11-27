@@ -1,0 +1,94 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@model TEDU.Areas.Admin.Models.Driver
+
+@{
+    ViewBag.Title = "Create Driver";
+}
+@using (Html.BeginForm("Create", "Driver", FormMethod.Post))
+{
+
+    <div class="container">
+        <h2>Thêm Tài xế</h2>
+
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label for="BusRouteId">Mã tuyến xe</label>
+            <select class="form-control" id="BusRouteId" name="BusRouteId" required>
+                <option value="">-- Chọn tuyến xe --</option>
+                @foreach (var route in ViewBag.BusRoutes)
+                {
+                    <option value="@route.Id">@route.Departure - @route.Destionation</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Name">Họ và Tên</label>
+            <input type="text" class="form-control" id="Name" name="Name" required />
+        </div>
+        <div class="form-group">
+            <label for="BirthDate">Ngày sinh</label>
+            <input type="date" class="form-control" id="BirthDate" name="BirthDate" required />
+        </div>
+        <div class="form-group">
+            <label for="PhoneNumber">Số điện thoại</label>
+            <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" required />
+            <span id="phoneError" style="color: red;"></span>
+        </div>
+        <div class="form-group">
+            <label for="Image">Ảnh</label>
+            <input type="file" class="form-control" id="Image" name="Image" required />
+        </div>
+        <div class="form-group">
+            <label for="Role">Vai trò</label>
+            <input type="text" class="form-control" id="Role" name="Role" value="Tài xế" readonly />
+        </div>
+        <div class="form-group">
+            <label for="LicenseNumber">Bằng cấp</label>
+            <select type="text" class="form-control" id="LicenseNumber" name="LicenseNumber" required>
+                <option value="A1">A1</option>
+                <option value="A2">A2</option>
+                <option value="B1">B1</option>
+                <option value="B2">B2</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="ExperienceYear">Số năm kinh nghiệm</label>
+            <input type="number" class="form-control" id="ExperienceYear" name="ExperienceYear" required />
+        </div>
+        <div class="form-group">
+            <input type="text" hidden class="form-control" id="Status" name="Status" value="Nghỉ" required />
+        </div>
+        <button type="submit" class="btn btn-primary btn-user btn-block" id="submitButton" disabled>Thêm tài xế</button>
+        <a href="@Url.Action("Index", "Driver")" class="btn btn-secondary btn-user btn-block">Quay lại</a>
+    </div>
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+    $('#PhoneNumber').on('input', function () {
+        var phoneNumber = $(this).val();
+
+        $.ajax({
+            url: '@Url.Action("CheckDriverPhoneNumber", "Driver")',
+            type: 'POST',
+            data: { phoneNumber: phoneNumber },
+            success: function (response) {
+                if (response.exists) {
+                    $('#phoneError').text('Số điện thoại đã tồn tại.');
+                    $('#submitButton').prop('disabled', true);
+                } else {
+                    $('#phoneError').text('');
+                    $('#submitButton').prop('disabled', false);
+                }
+            },
+            error: function () {
+                console.error('Error checking phone number');
+            }
+        });
+    });
+</script>
+

@@ -1,0 +1,66 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@model TEDU.Areas.Admin.Models.RouteInfo
+
+@{
+    ViewBag.Title = "Create Route";
+}
+@using (Html.BeginForm("CreateRoute", "Route", FormMethod.Post))
+{
+    <div class="container">
+        <h4>Thêm tuyến xe</h4>
+
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label for="DepartureLocation">Điểm khởi hành</label>
+            <select class="form-control select2" id="Departure" name="Departure" required>
+                <option value="">Chọn tỉnh</option>
+                @foreach (var province in ViewBag.Provinces as List<string>)
+                {
+                    <option value="@province">@province</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Destionation">Điểm khởi hành</label>
+            <select class="form-control select2" id="Destionation" name="Destionation" required>
+                <option value="">Chọn tỉnh</option>
+                @foreach (var province in ViewBag.Provinces as List<string>)
+                {
+                    <option value="@province">@province</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Distance">Khoảng cách (km)</label>
+            <input type="number" class="form-control" id="Distance" name="Distance" placeholder="Khoảng cách" />
+        </div>
+        <div class="form-group">
+            <label for="Duration">Thời gian di chuyển</label>
+            <input type="time" class="form-control" id="Duration" name="Duration" required />
+        </div>
+        <div class="form-group">
+            <label for="Price">Giá vé</label>
+            <input type="number" class="form-control" id="Price" name="Price" placeholder="Giá vé" />
+        </div>
+        <div class="form-group">
+            <input hidden type="text" class="form-control" id="Available" name="Available" value="Chưa chạy" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-user btn-block">Thêm tuyến xe</button>
+        <a href="@Url.Action("Index", "Route")" class="btn btn-secondary btn-user btn-block">Quay lại</a>
+    </div>
+}
+<script>
+    $(document).ready(function () {
+        // Kích hoạt Select2 cho dropdown
+        $('#DepartureLocation, #DestinationLocation').select2({
+            placeholder: "Chọn tỉnh/thành phố",
+            allowClear: true,
+            width: '100%'
+        });
+    });
+</script>
+

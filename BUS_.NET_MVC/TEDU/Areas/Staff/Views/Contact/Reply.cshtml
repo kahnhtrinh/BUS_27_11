@@ -1,0 +1,50 @@
+﻿@model TEDU.Areas.Staff.Models.Contact
+@{
+    Layout = "~/Areas/Staff/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h4>Trả lời liên hệ của khách hàng</h4>
+    <form asp-action="ReplyContact" method="post">
+        <!-- ID của liên hệ, hidden để giữ lại -->
+        <input type="hidden" asp-for="ContactId" />
+
+        <!-- Tên khách hàng -->
+        <div class="form-group">
+            <label for="CustomerName">Tên khách hàng</label>
+            <input type="text" asp-for="CustomerName" class="form-control" id="CustomerName" placeholder="Tên khách hàng" readonly />
+        </div>
+
+        <!-- Email khách hàng -->
+        <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="email" asp-for="Email" class="form-control" id="Email" placeholder="Email khách hàng" readonly />
+        </div>
+
+        <!-- Số điện thoại khách hàng -->
+        <div class="form-group">
+            <label for="Phone">Số điện thoại</label>
+            <input type="tel" asp-for="Phone" class="form-control" id="Phone" placeholder="Số điện thoại khách hàng" readonly />
+        </div>
+
+        <!-- Nội dung phản hồi -->
+        <div class="form-group">
+            <label for="ReplyMessage">Nội dung trả lời</label>
+            <textarea class="form-control" id="ReplyMessage" name="ReplyMessage" rows="4" placeholder="Nhập nội dung trả lời" required></textarea>
+        </div>
+
+        <!-- Nút gửi phản hồi -->
+        <button type="submit" class="btn btn-primary btn-icon-split">
+            <span class="icon text-white-100">
+                <i class="fas fa-paper-plane"></i>
+            </span>
+            <span class="text">Gửi phản hồi</span>
+        </button>
+        <a href="@Url.Action("Index", "Contact")" class="btn btn-outline-secondary btn-icon-split">
+            <span class="icon text-white-100">
+                <i class="fas fa-ban"></i>
+            </span>
+            <span class="text">Hủy</span>
+        </a>
+    </form>
+</div>

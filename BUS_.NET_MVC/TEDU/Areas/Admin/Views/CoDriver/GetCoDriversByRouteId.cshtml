@@ -1,0 +1,9 @@
+﻿@model IEnumerable<TEDU.Areas.Admin.Models.CoDriver>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Headers = new List<string> { "Mã tuyến", "ID", "Họ Tên", "Ngày sinh", "Số điện thoại", "Ảnh", "Vai trò", "Trạng thái", "Bằng cấp", "Số năm kinh nghiệm" };
+
+}
+
+@Html.Partial("_Table")
+

@@ -1,0 +1,8 @@
+﻿@model IEnumerable<TEDU.Areas.Admin.Models.Trip>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Headers = new List<string> { "Mã tuyến xe", "Mã chuyến xe", "Mã xe", "Thời gian khởi hành", "Thời gian di chuyển", "Thời gian đến","Tài xế","Phụ lái", "Trạng Thái" };
+}
+@Html.Partial("_Table")
+

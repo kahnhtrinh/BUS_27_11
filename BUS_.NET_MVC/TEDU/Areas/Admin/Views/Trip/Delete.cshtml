@@ -1,0 +1,22 @@
+﻿@model TEDU.Areas.Admin.Models.Trip
+
+<h2>Xóa xe</h2>
+<p>Bạn có chắc chắn muốn xóa chuyến xe này không?</p>
+
+<div>
+    <strong>Mã chuyến: </strong> @Model.Id<br />
+    <strong>Mã xe: </strong> @Model.BusId<br />
+    <strong>Mã tuyến: </strong> @Model.BusRouteId <br />
+    <strong>Mã tuyến: </strong> @Model.BusRouteId <br />
+    <strong>Thời gian xuất phát: </strong>@Model.DepartureDate
+    <strong>Thời gian đến:  </strong>@Model.EndTime
+    
+</div>
+
+@using (Html.BeginForm("DeleteTripConfirmed", "Trip", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a href="@Url.Action("GetTripsByRouteId", "Trip", new {routeId = @Model.BusRouteId})" class="btn btn-secondary">Hủy</a>
+}

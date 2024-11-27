@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "~/Areas/Staff/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h4>Chỉnh Sửa Chuyến Xe</h4>
+    <form asp-action="AddTrip" method="post">
+        <div class="form-group">
+            <label for="Route">Tuyến</label>
+            <select class="form-control" id="Route" name="Route">
+                <option value="">Chọn tuyến</option>
+                <option value="1">Tuyến 1</option>
+                <option value="2">Tuyến 2</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="DepartureTime">Thời gian khởi hành</label>
+            <input type="datetime-local" class="form-control" id="DepartureTime" name="DepartureTime" required>
+        </div>
+
+        <div class="form-group">
+            <label for="ArrivalTime">Thời gian đến</label>
+            <input type="datetime-local" class="form-control" id="ArrivalTime" name="ArrivalTime" required>
+        </div>
+
+        <div class="form-group">
+            <label for="Driver">Tài xế</label>
+            <select class="form-control" id="Driver" name="Driver">
+                <option value="">Chọn tài xế</option>
+                <option value="1">Tài xế 1</option>
+                <option value="2">Tài xế 2</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="Status">Trạng thái</label>
+            <select class="form-control" id="Status" name="Status">
+                <option value="Running">Đang chạy</option>
+                <option value="Completed">Đã hoàn thành</option>
+                <option value="Cancelled">Đã hủy</option>
+                <option value="Scheduled">Lên lịch</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-icon-split">
+            <span class="icon text-white-100">
+                <i class="fas fa-check-circle"></i>
+            </span>
+            <span class="text">Thêm Chuyến Xe</span>
+        </button>
+        <a href="@Url.Action("Index", "Trip")" class="btn btn-outline-secondary btn-icon-split">
+            <span class="icon text-white-100">
+                <i class="fas fa-trash-restore-alt"></i>
+            </span>
+            <span class="text">Hủy</span>
+        </a>
+    </form>
+</div>
+

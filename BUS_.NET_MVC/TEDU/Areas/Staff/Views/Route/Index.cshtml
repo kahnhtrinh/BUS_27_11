@@ -1,0 +1,8 @@
+﻿@{
+    Layout = "~/Areas/Staff/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Headers = new List<string> { "Điểm xuất phát", "Điểm đến", "Quãng đường" , "Thời gian hành trình", "Giá vé", "Trạng Thái" };
+}
+@Html.Partial("_Table")
+

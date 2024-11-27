@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@model TEDU.Areas.Admin.Models.Bus
+
+@{
+    ViewBag.Title = "Update Bus";
+}
+@using (Html.BeginForm("UpdateBus", "Bus", FormMethod.Post))
+{
+
+    <div class="container">
+        <h4>Sửa thông tin xe</h4>
+
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label for="BusRouteId">BusRouteId</label>
+            <input type="number" class="form-control" id="BusRouteId" name="BusRouteId" value="@Model.BusRouteId" required />
+        </div>
+        <div class="form-group">
+            <label for="BusNumber">BusNumber</label>
+            <input type="text" class="form-control" id="BusNumber" name="BusNumber" value="@Model.BusNumber" required />
+        </div>
+        <div class="form-group">
+            <label for="BeginDate">BeginDate</label>
+            <input type="datetime" class="form-control" id="BeginDate" name="BeginDate" value="@Model.BeginDate" required />
+        </div>
+
+        <div class="form-group">
+            <label for="Status">Status</label>
+            <input type="text" class="form-control" id="Status" name="Status" value="@Model.Status" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-user btn-block">Sửa thông tin tuyến xe</button>
+        <a href="@Url.Action("Index", "Route")" class="btn btn-secondary btn-user btn-block">Quay lại</a>
+    </div>
+}
+
+
+

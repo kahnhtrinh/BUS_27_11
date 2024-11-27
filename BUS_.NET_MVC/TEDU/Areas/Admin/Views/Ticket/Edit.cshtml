@@ -1,0 +1,167 @@
+﻿@model TEDU.Areas.Admin.Models.Ticket
+
+@{
+    ViewBag.Title = "Update Ticket";
+}
+
+<div class="container">
+    <h2>Thay đổi thông tin vé</h2>
+
+    <form id="bookingForm">
+        @Html.AntiForgeryToken()
+
+        <!-- Chọn tuyến xe -->
+        <div class="form-group">
+            <label for="BusRouteId">Tuyến xe</label>
+            <select class="form-control" id="BusRouteId" name="BusRouteId" onchange="loadTripsByRoute(this.value)" required>
+                <option value="">-- Chọn tuyến xe --</option>
+                @foreach (var route in ViewBag.BusRoutes)
+                {
+                    <option value="@route.Id">@route.Departure - @route.Destionation</option>
+                }
+            </select>
+        </div>
+
+        <!-- Chọn chuyến xe -->
+        <div class="form-group">
+            <label for="TripId">Chuyến xe</label>
+            <select class="form-control" id="TripId" value="@Model.TripId" name="TripId" onchange="loadSeatsByTrip(this.value)" required>
+                <option value="">-- Chọn chuyến xe --</option>
+            </select>
+        </div>
+
+        <!-- Hidden CreateDate -->
+        <input type="hidden" id="CreateDate" name="CreateDate" value="@DateTime.Now" />
+
+        <!-- Thông tin khách hàng -->
+        <div class="form-group">
+            <label for="CustomerName">Tên khách hàng</label>
+            <input type="text" class="form-control" id="CustomerName" name="CustomerName" value="@Model.CustomerName" required />
+        </div>
+        <div class="form-group">
+            <label for="CustomerPhone">Số điện thoại</label>
+            <input type="text" class="form-control" id="CustomerPhone" name="CustomerPhone" value="@Model.CustomerPhone" required />
+        </div>
+        <div class="form-group">
+            <label for="CustomerEmail">Email</label>
+            <input type="email" class="form-control" id="CustomerEmail" name="CustomerEmail" value="@Model.CustomerEmail" required />
+        </div>
+
+        <!-- Trạng thái vé -->
+        <div class="form-group">
+            <label for="Status">Trạng thái</label>
+            <select class="form-control" id="Status" name="Status" value="@Model.Status" required>
+                <option value="Chưa thanh toán">Chưa thanh toán</option>
+                <option value="Đã thanh toán">Đã thanh toán</option>
+            </select>
+        </div>
+
+        <!-- Danh sách ghế -->
+        <div class="form-group">
+            <label for="SeatNames">Chọn ghế</label>
+            <select class="form-control" id="SeatNames" name="SeatNames" required>
+                <option value="">-- Chọn ghế --</option>
+            </select>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-primary btn-user btn-block">Thêm vé</button>
+        <a href="@Url.Action("Index", "Ticket")" class="btn btn-secondary btn-user btn-block">Quay lại</a>
+    </form>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+<script>
+    function loadTripsByRoute(routeId) {
+        if (routeId) {
+            $.ajax({
+                url: '@Url.Action("GetTripsByRouteId_Ver", "Trip")',
+                type: 'GET',
+                data: { routeId: routeId },
+                success: function(data) {
+                    $("#TripId").empty();
+                    $("#TripId").append('<option value="">-- Chọn chuyến xe --</option>');
+                    if (data && data.length > 0) {
+                        data.forEach(function(trip) {
+                            let formattedDate = moment(trip.DepartureDate).format('DD/MM/YYYY HH:mm');
+                            let formattedDate_2 = moment(trip.EndTime).format('DD/MM/YYYY HH:mm');
+                            $("#TripId").append(`<option value="${trip.Id}">${trip.BusNumber} (${formattedDate} - ${formattedDate_2})</option>`);
+                        });
+                    } else {
+                        $("#TripId").append('<option value="">Không có chuyến xe cho tuyến này</option>');
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("Lỗi khi tải chuyến xe:", error);
+                    $("#TripId").empty();
+                    $("#TripId").append('<option value="">Lỗi khi tải chuyến xe</option>');
+                }
+            });
+        } else {
+            $("#TripId").empty();
+            $("#TripId").append('<option value="">-- Chọn chuyến xe --</option>');
+        }
+    }
+
+    function loadSeatsByTrip(tripId) {
+        if (tripId) {
+            $.ajax({
+                url: `https://localhost:7210/api/Ticket/GetSeatsByTripId/${tripId}`,
+                type: 'GET',
+                success: function(data) {
+                    $("#SeatNames").empty();
+                    $("#SeatNames").append('<option value="">-- Chọn ghế --</option>');
+                    if (data && data.length > 0) {
+                        data.forEach(function(seat) {
+                            $("#SeatNames").append(`<option value="${seat.seatName}">${seat.seatName}</option>`);
+                        });
+                    } else {
+                        $("#SeatNames").append('<option value="">Không có ghế cho chuyến này</option>');
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("Lỗi khi tải ghế:", error);
+                    $("#SeatNames").empty();
+                    $("#SeatNames").append('<option value="">Lỗi khi tải ghế</option>');
+                }
+            });
+        } else {
+            $("#SeatNames").empty();
+            $("#SeatNames").append('<option value="">-- Chọn ghế --</option>');
+        }
+    }
+
+    $(document).ready(function() {
+        $('#bookingForm').submit(function(event) {
+            event.preventDefault();
+            var postData = {
+                id: 0,
+                tripId: $('#TripId').val(),
+                createDate: $('#CreateDate').val(),
+                customerName: $('#CustomerName').val(),
+                customerPhone: $('#CustomerPhone').val(),
+                customerEmail: $('#CustomerEmail').val(),
+                status: $('#Status').val(),
+                seatNames: [$('#SeatNames').val()] // Chỉ lấy một giá trị ghế
+            };
+
+            $.ajax({
+                url: '@Url.Action("Edit", "Ticket")',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(postData),
+                success: function(response) {
+                    alert('Đặt chỗ thành công!');
+                    console.log('Đặt chỗ thành công:', response);
+                },
+                error: function(xhr, status, error) {
+                    console.error('Lỗi khi đặt chỗ:', error);
+                    alert('Lỗi khi đặt chỗ!');
+                }
+            });
+        });
+    });
+</script>

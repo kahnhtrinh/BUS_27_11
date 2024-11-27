@@ -1,0 +1,237 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\N\u0103m 3\\Dot.Net\\API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|d:\\n\u0103m 3\\dot.net\\api\\api\\dto\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|solutionrelative:api\\dto\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|d:\\n\u0103m 3\\dot.net\\api\\api\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|solutionrelative:api\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|d:\\n\u0103m 3\\dot.net\\api\\api\\models\\seat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|solutionrelative:api\\models\\seat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|d:\\n\u0103m 3\\dot.net\\api\\api\\controllers\\tripcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|solutionrelative:api\\controllers\\tripcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|d:\\n\u0103m 3\\dot.net\\api\\api\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|solutionrelative:api\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|d:\\n\u0103m 3\\dot.net\\api\\api\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|solutionrelative:api\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|d:\\n\u0103m 3\\dot.net\\api\\api\\models\\bus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|solutionrelative:api\\models\\bus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|d:\\n\u0103m 3\\dot.net\\api\\api\\dto\\busdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|solutionrelative:api\\dto\\busdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|d:\\n\u0103m 3\\dot.net\\api\\api\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|solutionrelative:api\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|d:\\n\u0103m 3\\dot.net\\api\\api\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|solutionrelative:api\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|d:\\n\u0103m 3\\dot.net\\api\\api\\models\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|solutionrelative:api\\models\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|d:\\n\u0103m 3\\dot.net\\api\\api\\models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|solutionrelative:api\\models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|d:\\n\u0103m 3\\dot.net\\api\\api\\models\\codriver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E0FCD2D-DED5-4DDE-8A52-FF9881E540BB}|API\\API.csproj|solutionrelative:api\\models\\codriver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TicketDTO.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\DTO\\TicketDTO.cs",
+              "RelativeDocumentMoniker": "API\\DTO\\TicketDTO.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\DTO\\TicketDTO.cs",
+              "RelativeToolTip": "API\\DTO\\TicketDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T19:54:18.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TicketController.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Controllers\\TicketController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\TicketController.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Controllers\\TicketController.cs",
+              "RelativeToolTip": "API\\Controllers\\TicketController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAADwv94AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T17:36:09.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Seat.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Models\\Seat.cs",
+              "RelativeDocumentMoniker": "API\\Models\\Seat.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Models\\Seat.cs",
+              "RelativeToolTip": "API\\Models\\Seat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T17:04:42.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Models\\Ticket.cs",
+              "RelativeDocumentMoniker": "API\\Models\\Ticket.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Models\\Ticket.cs",
+              "RelativeToolTip": "API\\Models\\Ticket.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T17:04:35.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BusDTO.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\DTO\\BusDTO.cs",
+              "RelativeDocumentMoniker": "API\\DTO\\BusDTO.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\DTO\\BusDTO.cs",
+              "RelativeToolTip": "API\\DTO\\BusDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T15:39:50.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Bus.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Models\\Bus.cs",
+              "RelativeDocumentMoniker": "API\\Models\\Bus.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Models\\Bus.cs",
+              "RelativeToolTip": "API\\Models\\Bus.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T15:39:44.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TripController.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Controllers\\TripController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\TripController.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Controllers\\TripController.cs",
+              "RelativeToolTip": "API\\Controllers\\TripController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAwwC4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T05:56:24.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "API\\Models\\Employee.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Models\\Employee.cs",
+              "RelativeToolTip": "API\\Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T19:16:09.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\EmployeeController.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "API\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAFoBAAAAAAAAAAAwwGMBAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T16:49:01.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "API\\Data\\DataContext.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Data\\DataContext.cs",
+              "RelativeToolTip": "API\\Data\\DataContext.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAFcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T16:07:11.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CoDriver.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Models\\CoDriver.cs",
+              "RelativeDocumentMoniker": "API\\Models\\CoDriver.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Models\\CoDriver.cs",
+              "RelativeToolTip": "API\\Models\\CoDriver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T16:05:50.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Driver.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Models\\Driver.cs",
+              "RelativeDocumentMoniker": "API\\Models\\Driver.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Models\\Driver.cs",
+              "RelativeToolTip": "API\\Models\\Driver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:56:27.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Staff.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Models\\Staff.cs",
+              "RelativeDocumentMoniker": "API\\Models\\Staff.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\API\\API\\Models\\Staff.cs",
+              "RelativeToolTip": "API\\Models\\Staff.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:47:09.117Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

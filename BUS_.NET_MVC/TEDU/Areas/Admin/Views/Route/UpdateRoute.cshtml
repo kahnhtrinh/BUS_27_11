@@ -1,0 +1,48 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@model TEDU.Areas.Admin.Models.RouteInfo
+
+@{
+    ViewBag.Title = "Update Route";
+}
+@using (Html.BeginForm("UpdateRoute", "Route", FormMethod.Post))
+{
+
+    <div class="container">
+        <h4>Sửa thông tin tuyến xe</h4>
+
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label for="Departure">Departure</label>
+            <input type="text" class="form-control" id="Departure" name="Departure" value="@Model.Departure" required />
+        </div>
+        <div class="form-group">
+            <label for="Destionation">Destionation</label>
+            <input type="text" class="form-control" id="Destionation" name="Destionation" value="@Model.Destionation" required />
+        </div>
+        <div class="form-group">
+            <label for="Distance">Distance</label>
+            <input type="text" class="form-control" id="Distance" name="Distance" value="@Model.Distance" required />
+        </div>
+        <div class="form-group">
+            <label for="Duration">Duration</label>
+            <input type="time" class="form-control" id="Duration" name="Duration" value="@Model.Duration" required />
+        </div>
+        <div class="form-group">
+            <label for="Price">Price</label>
+            <input type="text" class="form-control" id="Price" name="Price" value="@Model.Price" required />
+        </div>
+        <div class="form-group">
+            <label for="Available">Available</label>
+            <input type="text" class="form-control" id="Available" name="Available" value="@Model.Available" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-user btn-block">Sửa thông tin tuyến xe</button>
+        <a href="@Url.Action("Index", "Route")" class="btn btn-secondary btn-user btn-block">Quay lại</a>
+    </div>
+}
+
+
+

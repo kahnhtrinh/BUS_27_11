@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@model TEDU.Areas.Admin.Models.Bus
+
+@{
+    ViewBag.Title = "Create Bus";
+}
+@using (Html.BeginForm("CreateBus", "Bus", FormMethod.Post))
+{
+
+    <div class="container">
+        <h4>Thêm xe</h4>
+
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label for="BusRouteId">Mã tuyến xe</label>
+            <select class="form-control" id="BusRouteId" name="BusRouteId" required>
+                <option value="">-- Chọn tuyến xe --</option>
+                @foreach (var route in ViewBag.BusRoutes)
+                {
+                    <option value="@route.Id">@route.Departure - @route.Destionation</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="BusNumber">Biển số xe</label>
+            <input type="text" class="form-control" id="BusNumber" name="BusNumber" required />
+            <span id="busNumberError" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="BeginDate">Ngày đưa vào hoạt động</label>
+            <input type="datetime-local" class="form-control" id="BeginDate" name="BeginDate" required />
+        </div>
+
+        <div class="form-group">
+            <input type="text" hidden class="form-control" id="Status" name="Status" value="Khả dụng" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-user btn-block" id="submitBtn" disabled>Thêm xe</button>
+        <a href="@Url.Action("Index", "Route")" class="btn btn-secondary btn-user btn-block">Quay lại</a>
+    </div>
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+    $('#BusNumber').on('input', function () {
+        var busNumber = $(this).val();
+        $.ajax({
+            url: '@Url.Action("CheckBusNumber", "Bus")',
+            type: 'POST',
+            data: { busNumber: busNumber },
+            success: function (response) {
+                if (response.exists) {
+                    $('#busNumberError').text('BusNumber đã tồn tại. Vui lòng chọn mã số khác.');
+                    $('#submitBtn').prop('disabled', true);
+                } else {
+                    $('#busNumberError').text('');
+                    $('#submitBtn').prop('disabled', false);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('Error checking BusNumber:', error);
+            }
+        });
+    });
+});
+
+    function setMinDateTime() {
+        var currentDate = new Date();
+        var year = currentDate.getFullYear();
+        var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+        var day = currentDate.getDate().toString().padStart(2, '0');
+        var hours = currentDate.getHours().toString().padStart(2, '0');
+        var minutes = currentDate.getMinutes().toString().padStart(2, '0');
+        var minDateTime = year + '-' + month + '-' + day + 'T' + hours + ':' + minutes;
+        $('#BeginDate').attr('min', minDateTime);
+    }
+
+    $(document).ready(function () {
+        setMinDateTime();
+        $('#BeginDate').on('input', function () {
+            setMinDateTime();
+        });
+    });
+</script>
+
+

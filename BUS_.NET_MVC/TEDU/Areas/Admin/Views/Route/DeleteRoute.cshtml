@@ -1,0 +1,18 @@
+﻿@model TEDU.Areas.Admin.Models.RouteInfo
+
+<h2>Xóa tuyến xe</h2>
+<p>Bạn có chắc chắn muốn xóa tuyến xe này không?</p>
+
+<div>
+    <strong>Mã tuyến: </strong> @Model.Id <br />
+    <strong>Điểm xuất phát :</strong> @Model.Departure <br />
+    <strong>Điểm đến: </strong> @Model.Destionation <br />
+</div>
+
+@using (Html.BeginForm("DeleteRouteConfirmed", "Route", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a href="@Url.Action("Index", "Route")" class="btn btn-secondary">Hủy</a>
+}

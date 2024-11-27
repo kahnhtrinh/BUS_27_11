@@ -1,0 +1,8 @@
+﻿@model IEnumerable<TEDU.Areas.Admin.Models.Ticket>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Headers = new List<string> { "Mã vé", "Mã chuyến", "Thời gian tạo", "Tên hành khách", "Số điện thoại", "Email", "Ghế", "Thời gian tạo", "Trạng thái thanh toán" };
+}
+
+@Html.Partial("_Table")
+

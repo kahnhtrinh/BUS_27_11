@@ -1,0 +1,582 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\trip\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\trip\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|d:\\n\u0103m 3\\dot.net\\bus_.net_mvc\\tedu\\areas\\admin\\views\\trip\\gettripsbyrouteid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\trip\\gettripsbyrouteid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\ticket\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\ticket\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|d:\\n\u0103m 3\\dot.net\\bus_.net_mvc\\tedu\\areas\\admin\\views\\shared\\_table.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\shared\\_table.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|d:\\n\u0103m 3\\dot.net\\bus_.net_mvc\\tedu\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\codriver\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\codriver\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\codriver\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\codriver\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\controllers\\tripcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\controllers\\tripcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\controllers\\routecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\controllers\\routecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\driver\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\driver\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\controllers\\drivercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\controllers\\drivercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\service\\routeapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\service\\routeapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\codriver\\getcodriversbyrouteid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\codriver\\getcodriversbyrouteid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\controllers\\codrivercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\controllers\\codrivercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\bus\\createbus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\bus\\createbus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\controllers\\buscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\controllers\\buscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\trip\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\trip\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\route\\createroute.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\route\\createroute.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\staff\\views\\route\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\staff\\views\\route\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\ticket\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\ticket\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\route\\deleteroute.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\route\\deleteroute.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\driver\\getdriversbyrouteid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\driver\\getdriversbyrouteid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\service\\tripapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\service\\tripapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\trip\\createtrip.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\trip\\createtrip.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\codriver\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\codriver\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\driver\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\driver\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\route\\updateroute.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\route\\updateroute.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\driver\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\driver\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\codriver\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\codriver\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\views\\trip\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\views\\trip\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\models\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\models\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\tedu\\areas\\admin\\service\\employeeapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E30A75F-344A-4075-8DF1-7A59BDA0A054}|TEDU\\TEDU.csproj|solutionrelative:tedu\\areas\\admin\\service\\employeeapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetTripsByRouteId.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Trip\\GetTripsByRouteId.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Trip\\GetTripsByRouteId.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Trip\\GetTripsByRouteId.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Trip\\GetTripsByRouteId.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T09:41:03.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DeleteRoute.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Route\\DeleteRoute.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Route\\DeleteRoute.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Route\\DeleteRoute.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Route\\DeleteRoute.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T03:27:59.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Ticket\\Delete.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Ticket\\Delete.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Ticket\\Delete.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Ticket\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T03:15:38.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CreateRoute.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Route\\CreateRoute.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Route\\CreateRoute.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Route\\CreateRoute.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Route\\CreateRoute.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAC0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T23:49:41.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Table.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Shared\\_Table.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Shared\\_Table.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Shared\\_Table.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Shared\\_Table.cshtml",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAmwOEAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T16:31:29.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Trip\\Index.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Trip\\Index.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Trip\\Index.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Trip\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-23T11:17:31.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Staff\\Views\\Route\\Create.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Staff\\Views\\Route\\Create.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Staff\\Views\\Route\\Create.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Staff\\Views\\Route\\Create.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T05:21:20.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Ticket\\Create.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Ticket\\Create.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Ticket\\Create.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Ticket\\Create.cshtml",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAswA8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T22:47:15.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T09:27:49.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CreateBus.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Bus\\CreateBus.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Bus\\CreateBus.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Bus\\CreateBus.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Bus\\CreateBus.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAIwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T05:57:57.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RouteAPIService.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Service\\RouteAPIService.cs",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Service\\RouteAPIService.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Service\\RouteAPIService.cs",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Service\\RouteAPIService.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T07:40:05.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Trip\\Create.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Trip\\Create.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Trip\\Create.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Trip\\Create.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T08:26:49.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CreateTrip.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Trip\\CreateTrip.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Trip\\CreateTrip.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Trip\\CreateTrip.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Trip\\CreateTrip.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T23:49:45.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TripController.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Controllers\\TripController.cs",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Controllers\\TripController.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Controllers\\TripController.cs",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Controllers\\TripController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAjwFMAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:48:59.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TicketController.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Controllers\\TicketController.cs",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Controllers\\TicketController.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Controllers\\TicketController.cs",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Controllers\\TicketController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAqwBsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T19:01:04.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UpdateRoute.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Route\\UpdateRoute.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Route\\UpdateRoute.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Route\\UpdateRoute.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Route\\UpdateRoute.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T16:09:41.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\CoDriver\\Delete.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\CoDriver\\Delete.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\CoDriver\\Delete.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\CoDriver\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T12:17:18.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Driver\\Delete.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Driver\\Delete.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Driver\\Delete.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Driver\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T12:14:03.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\CoDriver\\Update.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\CoDriver\\Update.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\CoDriver\\Update.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\CoDriver\\Update.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T12:11:13.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Driver\\Update.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Driver\\Update.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Driver\\Update.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Driver\\Update.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAIwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T12:03:05.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Trip\\Update.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Trip\\Update.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Trip\\Update.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Trip\\Update.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T11:10:47.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TripAPIService.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Service\\TripAPIService.cs",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Service\\TripAPIService.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Service\\TripAPIService.cs",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Service\\TripAPIService.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAmwE0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T08:34:10.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GetCoDriversByRouteId.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\CoDriver\\GetCoDriversByRouteId.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\CoDriver\\GetCoDriversByRouteId.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\CoDriver\\GetCoDriversByRouteId.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\CoDriver\\GetCoDriversByRouteId.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T08:18:39.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\CoDriver\\Index.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\CoDriver\\Index.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\CoDriver\\Index.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\CoDriver\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T08:17:12.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\CoDriver\\Create.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\CoDriver\\Create.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\CoDriver\\Create.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\CoDriver\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T08:08:37.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GetDriversByRouteId.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Driver\\GetDriversByRouteId.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Driver\\GetDriversByRouteId.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Driver\\GetDriversByRouteId.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Driver\\GetDriversByRouteId.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T07:59:23.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Driver.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Models\\Driver.cs",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Models\\Driver.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Models\\Driver.cs",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Models\\Driver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T07:51:21.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RouteController.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Controllers\\RouteController.cs",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Controllers\\RouteController.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Controllers\\RouteController.cs",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Controllers\\RouteController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T07:50:26.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DriverController.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Controllers\\DriverController.cs",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Controllers\\DriverController.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Controllers\\DriverController.cs",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Controllers\\DriverController.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAIwGEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T04:39:18.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Driver\\Index.cshtml",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Views\\Driver\\Index.cshtml",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Views\\Driver\\Index.cshtml",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Views\\Driver\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T07:31:17.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Models\\Employee.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Models\\Employee.cs",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T07:10:05.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CoDriverController.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Controllers\\CoDriverController.cs",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Controllers\\CoDriverController.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Controllers\\CoDriverController.cs",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Controllers\\CoDriverController.cs",
+              "ViewState": "AgIAAOAAAAAAAAAAAAAQwOYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T06:09:04.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "EmployeeAPIService.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Service\\EmployeeAPIService.cs",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Service\\EmployeeAPIService.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Service\\EmployeeAPIService.cs",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Service\\EmployeeAPIService.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAAwLAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T04:24:46.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BusController.cs",
+              "DocumentMoniker": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Controllers\\BusController.cs",
+              "RelativeDocumentMoniker": "TEDU\\Areas\\Admin\\Controllers\\BusController.cs",
+              "ToolTip": "D:\\N\u0103m 3\\Dot.Net\\BUS_.NET_MVC\\TEDU\\Areas\\Admin\\Controllers\\BusController.cs",
+              "RelativeToolTip": "TEDU\\Areas\\Admin\\Controllers\\BusController.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAYwGgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T05:58:19.206Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

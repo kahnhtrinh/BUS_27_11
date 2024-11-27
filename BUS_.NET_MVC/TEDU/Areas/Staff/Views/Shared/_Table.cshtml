@@ -1,0 +1,160 @@
+﻿<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3 d-flex align-items-center justify-content-between">
+        <h6 class="m-0 font-weight-bold text-primary">Dữ liệu</h6>
+        @{
+            string actionUrl = "#"; 
+
+            switch (ViewBag.PageType as string)
+            {
+                case "Route":
+                    actionUrl = Url.Action("Create", "Route");
+                    break;
+                case "Trip":
+                    actionUrl = Url.Action("Create", "Trip");
+                    break;
+                case "Ticket":
+                    actionUrl = Url.Action("Create", "Ticket");
+                    break;
+                case "TicketStaff":
+                    actionUrl = Url.Action("Create", "TicketStaff");
+                    break;
+                case "Driver":
+                    actionUrl = Url.Action("Create", "Driver");
+                    break;
+                case "CoDriver":
+                    actionUrl = Url.Action("Create", "CoDriver");
+                    break;  
+            }
+        }
+
+        @if (ViewBag.PageType != "Contact")
+        {
+            <a href="@actionUrl" class="btn btn-primary btn-icon-split">
+                <span class="icon text-white-100">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Thêm</span>
+            </a>
+        }
+
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        @foreach (var header in ViewBag.Headers as List<string>)
+                        {
+                            <th>@header</th>
+                        }
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        @foreach (var footer in ViewBag.Headers as List<string>)
+                        {
+                            <th>@footer</th>
+                        }
+                        <th>Hành động</th>  
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @using TEDU.Areas.Staff.Models
+                    @if (ViewBag.PageType == "Route")
+                    {
+                        foreach (var data in ViewBag.Data as List<RouteInfo>)
+                        {
+                            <tr>
+                                <td>@data.Departure</td>
+                                <td>@data.Destionation</td>
+                                <td>@data.Distance</td>
+                                <td>@data.Duration</td>
+                                <td>@data.Price</td>
+                                <td>@data.Available</td>
+                                <td class="d-flex justify-content-around">
+                                    <a href="@Url.Action("Edit", "Route")" class="btn btn-outline-info">
+                                        <i class="fas fa-wrench"></i>
+                                    </a>
+                                    <button class="btn btn-outline-danger">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else if (ViewBag.PageType == "Trip")
+                    {
+                        foreach (var data in ViewBag.Data as List<Trip>)
+                        {
+                            <tr>
+                                <td>@data.RouteInfo.Departure - @data.RouteInfo.Destionation</td>
+                                <td>@data.DepartureTime</td>
+                                <td>@data.DriverName</td>
+                                <td>@data.TicketPrice</td>
+                                <td>@data.Status</td>
+                                <td class="d-flex justify-content-around">
+                                    <a href="@Url.Action("Edit", "Trip")" class="btn btn-outline-info">
+                                        <i class="fas fa-wrench"></i>
+                                    </a>
+                                    <button class="btn btn-outline-danger">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else if (ViewBag.PageType == "Ticket")
+                    {
+                        foreach (var data in ViewBag.Data as List<Ticket>)
+                        {
+                            <tr>
+                                <td>@data.TicketId</td>
+                                <td>@data.TripId</td>
+                                <td>@data.Trip.RouteInfo.Departure - @data.Trip.RouteInfo.Destionation</td>
+                                <td>@data.PassengerName</td>
+                                <td>@data.PassengerPhone</td>
+                                <td>@data.PassengerEmail</td>
+                                <td>@data.SeatNumber</td>
+                                <td>@data.BookingDate</td>
+                                <td>@data.IsPaid</td>
+
+                                <td class="d-flex justify-content-between">
+                                    <a href="@Url.Action("Edit", "Ticket")" class="btn btn-outline-info">
+                                        <i class="fas fa-wrench"></i>
+                                    </a>
+                                    <button class="btn btn-outline-danger">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else if (ViewBag.PageType == "Contact")
+                    {
+                        foreach (var data in ViewBag.Data as List<Contact>)
+                        {
+                            <tr>
+                                <td>@data.ContactId</td>
+                                <td>@data.CustomerName</td>
+                                <td>@data.Email</td>
+                                <td>@data.Phone</td>
+                                <td>@data.Message</td>
+                                <td>@data.SentDate</td>
+                                <td class="d-flex justify-content-around">
+                                    <a href="@Url.Action("Reply", "Contact")" class="btn btn-outline-info">
+                                        <i class="fas fa-comment-dots"></i>
+                                    </a>
+                                    <button class="btn btn-outline-danger">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

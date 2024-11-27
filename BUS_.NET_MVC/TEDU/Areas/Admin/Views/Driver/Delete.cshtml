@@ -1,0 +1,18 @@
+﻿@model TEDU.Areas.Admin.Models.Driver
+
+<h2>Xóa tài xế</h2>
+<p>Bạn có chắc chắn muốn xóa tài xế này không?</p>
+
+<div>
+    <strong>Mã tài xế: </strong> @Model.Id<br />
+    <strong>Tên tài xế: </strong> @Model.Name<br />
+    <strong>Mã tuyến: </strong> @Model.BusRouteId <br />
+</div>
+
+@using (Html.BeginForm("DeleteDriverConfirmed", "Driver", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a href="@Url.Action("GetDriversByRouteId", "Driver", new {routeId = @Model.BusRouteId})" class="btn btn-secondary">Hủy</a>
+}

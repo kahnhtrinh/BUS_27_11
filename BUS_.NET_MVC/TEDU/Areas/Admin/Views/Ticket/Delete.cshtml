@@ -1,0 +1,21 @@
+﻿@model TEDU.Areas.Admin.Models.Ticket
+
+<h2>Xóa vé xe</h2>
+<p>Bạn có chắc chắn muốn xóa vé này không?</p>
+
+<div>
+    <strong>Mã vé: </strong> @Model.Id <br />
+    <strong>Mã chuyến: </strong>@Model.TripId <br/>
+    <strong>Số ghế: </strong>@Model.SeatNames1 <br/>
+    <strong>Họ và tên khách hàng: </strong>@Model.CustomerName <br/>
+    <strong>Số điện thoại khách hàng :</strong> @Model.CustomerPhone <br />
+    <strong>Email khách hàng: </strong> @Model.CustomerEmail <br />
+</div>
+
+@using (Html.BeginForm("DeleteTicketConfirmed", "Ticket", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a href="@Url.Action("Index", "Ticket")" class="btn btn-secondary">Hủy</a>
+}

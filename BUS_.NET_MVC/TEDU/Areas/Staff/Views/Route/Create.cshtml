@@ -1,0 +1,80 @@
+﻿@{
+    Layout = "~/Areas/Staff/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h4>Thêm Tuyến Xe Mới</h4>
+    <form asp-action="AddRoute" method="post">
+        <div class="form-group">
+            <label for="DepartureLocation">Điểm khởi hành</label>
+            <select class="form-control select2" id="DepartureLocation" name="DepartureLocation" required>
+                <option value="">Chọn tỉnh/thành phố</option>
+                @foreach (var province in ViewBag.Provinces as List<string>)
+                {
+                    <option value="@province">@province</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="DestinationLocation">Điểm đến</label>
+            <select class="form-control select2" id="DestinationLocation" name="DestinationLocation" required>
+                <option value="">Chọn tỉnh/thành phố</option>
+                @foreach (var province in ViewBag.Provinces as List<string>)
+                {
+                    <option value="@province">@province</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="Distance">Khoảng cách (km)</label>
+            <input type="number" class="form-control" id="Distance" name="Distance" placeholder="Khoảng cách" required>
+        </div>
+
+        <div class="form-group">
+            <label for="EstimatedDuration">Thời gian hành trình dự kiến</label>
+            <div class="d-flex">
+                <input type="number" class="form-control" id="EstimatedHours" name="EstimatedHours" placeholder="Giờ" min="0" style="max-width: 100px; margin-right: 10px;" required>
+                <input type="number" class="form-control" id="EstimatedMinutes" name="EstimatedMinutes" placeholder="Phút" min="0" max="59" style="max-width: 100px;" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="TicketPrice">Giá vé (VNĐ)</label>
+            <input type="number" class="form-control" id="TicketPrice" name="TicketPrice" placeholder="Giá vé" required>
+        </div>
+
+        <div class="form-group">
+            <label for="Status">Trạng thái</label>
+            <select class="form-control" id="Status" name="Status" required>
+                <option value="active">Hoạt động</option>
+                <option value="inactive">Ngưng hoạt động</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-icon-split">
+            <span class="icon text-white-100">
+                <i class="fas fa-check-circle"></i>
+            </span>
+            <span class="text">Thêm Tuyến Xe</span>
+        </button>
+        <a href="@Url.Action("Index", "Route")" class="btn btn-outline-secondary btn-icon-split">
+            <span class="icon text-white-100">
+                <i class="fas fa-trash-restore-alt"></i>
+            </span>
+            <span class="text">Hủy</span>
+        </a>
+    </form>
+</div>
+
+<script>
+    $(document).ready(function () {
+        // Kích hoạt Select2 cho dropdown
+        $('#DepartureLocation, #DestinationLocation').select2({
+            placeholder: "Chọn tỉnh/thành phố",
+            allowClear: true,
+            width: '100%'
+        });
+    });
+</script>

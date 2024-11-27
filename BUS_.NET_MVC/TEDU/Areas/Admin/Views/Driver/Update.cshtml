@@ -1,0 +1,59 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@model TEDU.Areas.Admin.Models.Driver
+
+@{
+    ViewBag.Title = "Update Driver";
+}
+@using (Html.BeginForm("Update", "Driver", FormMethod.Post))
+{
+
+    <div class="container">
+        <h4>Sửa thông tin tài xế</h4>
+
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label for="BusRouteId">BusRouteId</label>
+            <input type="number" class="form-control" id="BusRouteId" name="BusRouteId" value="@Model.BusRouteId" required />
+        </div>
+        <div class="form-group">
+            <label for="Name">Họ và Tên</label>
+            <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" required />
+        </div>
+        <div class="form-group">
+            <label for="BirthDate">Ngày sinh</label>
+            <input type="date" class="form-control" id="BirthDate" name="BirthDate" value="@Model.BirthDate" required />
+        </div>
+        <div class="form-group">
+            <label for="PhoneNumber">Số điện thoại</label>
+            <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber" required />
+        </div>
+        <div class="form-group">
+            <label for="Image">Ảnh</label>
+            <input type="text" class="form-control" id="Image" name="Image" value="@Model.Image" required />
+        </div>
+        <div class="form-group">
+            <label for="Role">Vai trò</label>
+            <input type="text" class="form-control" id="Role" name="Role" value="Tài xế" readonly />
+        </div>
+        <div class="form-group">
+            <label for="LicenseNumber">Bằng cấp</label>
+            <input type="text" class="form-control" id="LicenseNumber" name="LicenseNumber" value="@Model.LicenseNumber" required />
+        </div>
+        <div class="form-group">
+            <label for="ExperienceYear">Số năm kinh nghiệm</label>
+            <input type="number" class="form-control" id="ExperienceYear" name="ExperienceYear" value="@Model.ExperienceYear" required />
+        </div>
+        <div class="form-group">
+            <label for="Status">Trạng thái</label>
+            <input type="text" class="form-control" id="Status" name="Status" value="@Model.Status" required />
+        </div>
+        <button type="submit" class="btn btn-primary btn-user btn-block">Sửa thông tin tài xế</button>
+        <a href="@Url.Action("GetDriversByRouteId", "Driver", new {routeId = @Model.BusRouteId} )" class="btn btn-secondary btn-user btn-block">Quay lại</a>
+    </div>
+}
+
+
+

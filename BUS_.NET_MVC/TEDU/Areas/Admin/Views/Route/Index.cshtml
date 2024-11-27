@@ -1,0 +1,8 @@
+﻿@model IEnumerable<TEDU.Areas.Admin.Models.RouteInfo>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Headers = new List<string> {"ID", "Điểm khởi hành", "Điểm đến", "Khoảng cách", "Thời gian dự kiến", "Giá vé", "Tình trạng", "Chuyến xe" ,"Xe"};
+}
+
+@Html.Partial("_Table", Model);
+

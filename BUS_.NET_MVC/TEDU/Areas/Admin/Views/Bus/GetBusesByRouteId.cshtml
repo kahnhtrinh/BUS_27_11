@@ -1,0 +1,8 @@
+﻿@model IEnumerable<TEDU.Areas.Admin.Models.Bus>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Headers = new List<string> { "Mã tuyến", "ID", "Số xe", "Ngày vận hành", "Trạng thái"};
+}
+
+@Html.Partial("_Table", Model);
+
