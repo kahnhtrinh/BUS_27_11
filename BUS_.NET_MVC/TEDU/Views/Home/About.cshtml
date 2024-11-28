@@ -7,10 +7,20 @@
 <div class="container-fluid header bg-white p-0">
     <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
         <div class="col-md-6 p-5 mt-lg-5">
-            <h1 class="display-5 animated fadeIn mb-4">Về chúng tôi</h1>
+            <h1 class="display-5 animated fadeIn mb-4"> <span class="text-primary">Về chúng tôi - 2TL BUS</span></h1>
+            <h2 class="display-5 animated fadeIn mb-4"> Niềm tin trên từng chặng đường</h2>
+            <p class="animated fadeIn mb-4 pb-2">Tại nhà xe 2-TL, chúng tôi tự hào là đối tác tin cậy của bạn trong mỗi hành trình. Với khẩu hiệu "Niềm tin trên từng chặng đường", chúng tôi cam kết mang đến cho quý khách những trải nghiệm di chuyển an toàn, tiện lợi và thoải mái nhất. Đội ngũ tài xế chuyên nghiệp và thân thiện, cùng với các dịch vụ chăm sóc khách hàng chu đáo, luôn sẵn sàng phục vụ quý khách trên mọi tuyến đường.</p>
+            
         </div>
         <div class="col-md-6 animated fadeIn">
-            <img class="img-fluid" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnhiErwl_cecSf32C1vhwDVkJzPuUcbJExApc4I6rENr8VKSOzlzhA1yHeMx15RqbK_zQis0m5BBj-C5BTIlRKAo-5y-rcEyIE2WMauqJIJFaCg0HIK2TuPqqOW-4Fj_5i_ipb0gt-wMg/s640/xe-bus-2-tang-city-tour-sai-gon-mgm-travel-6.jpg" alt="">
+            <div class="owl-carousel header-carousel">
+                <div class="owl-carousel-item">
+                    <img class="img-fluid" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnhiErwl_cecSf32C1vhwDVkJzPuUcbJExApc4I6rENr8VKSOzlzhA1yHeMx15RqbK_zQis0m5BBj-C5BTIlRKAo-5y-rcEyIE2WMauqJIJFaCg0HIK2TuPqqOW-4Fj_5i_ipb0gt-wMg/s640/xe-bus-2-tang-city-tour-sai-gon-mgm-travel-6.jpg" alt="">
+                </div>
+                <div class="owl-carousel-item">
+                    <img class="img-fluid" src="https://www.traveloffpath.com/wp-content/uploads/2023/03/Bus-traveling-on-the-asphalt-road-in-rural-landscape-at-sunset1.jpg.webp" alt="">
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -18,27 +28,27 @@
 <!-- Search Start -->
 <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
     <div class="container">
-        <div class="row g-2">
-            <div class="col-md-10">
-                <div class="row g-2">
-                    <div class="col-md-4">
-                        <input type="text" class="form-control datetimepicker-input border-0 py-3" placeholder="Ngày đi" id="dayTo">
-                    </div>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control datetimepicker-input border-0 py-3" placeholder="Ngày đến" id="dayTo">
-                    </div>
-                    <div class="col-md-4">
-                        <select class="form-select border-0 py-3">
-                            <option selected>Số vé</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </div>
-                </div>
+        <!-- Hàng ngang chứa các ô nhập liệu -->
+        <div class="row g-2 justify-content-center">
+            <div class="col-md-4">
+                <input type="text" class="form-control border-2 py-3" placeholder="Điểm đi">
             </div>
-            <div class="col-md-2">
-                <button class="btn btn-dark border-0 w-100 py-3">Tìm kiếm</button>
+            <div class="col-md-1 d-flex justify-content-center align-items-center">
+                <button class="btn border-0">
+                    <i class="bi bi-arrow-left-right fa-2x text-white"></i>
+                </button>
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control border-2 py-3" placeholder="Điểm đến">
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control border-2 py-3 datetimepicker-input" placeholder="Chọn ngày đi" id="dayTo" />
+            </div>
+        </div>
+        <!-- Nút Search nằm ở giữa phía dưới -->
+        <div class="row mt-3 justify-content-center">
+            <div class="col-md-4">
+                <button class="btn btn-dark border-0 w-100 py-3">Tìm kiếm </button>
             </div>
         </div>
     </div>

@@ -1,0 +1,9 @@
+﻿@model IEnumerable<TEDU.Areas.Admin.Models.Account>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Headers = new List<string> { "ID", "Tên đăng nhập", "Mật khẩu", "Ngày tạo", "Người dùng", "Vai trò" };
+
+}
+
+@Html.Partial("_Table")
+

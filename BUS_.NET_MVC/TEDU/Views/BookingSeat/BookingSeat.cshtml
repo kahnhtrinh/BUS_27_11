@@ -1,0 +1,231 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+<!-- Header Start -->
+<div class="container-fluid header bg-white p-0">
+    <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+        <div class="col-md-6 p-5 mt-lg-5"></div>
+    </div>
+</div>
+<div class="container fw-semibold mt-4">
+    <!-- Navigation Button -->
+    <a href="javascript:history.back()" class="btn btn-secondary btn-sm p-2 mb-3 ms-2">
+        <i class="fa-solid fa-arrow-left"></i> Quay lại
+    </a>
+
+    <div class="row">
+        <!-- Seat Selection -->
+        <div class="col-lg-8 col-md-12 info-box mb-4 shadow mx-auto px-3 ms-4 rounded">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="fs-4 fw-bold text-light px-3 py-2 rounded"></span>
+                <span class="fs-3 fw-bold text-success px-3 py-2 rounded">Chọn ghế</span>
+                <a href="#" class="text-primary">Thông tin xe</a>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <h6 class="text-center text-uppercase fw-bold">Tầng dưới</h6>
+                    @{
+                        int count_low = 0;
+                        int count_up = 0;// Đếm số ghế đã lặp qua
+                    }
+                    <div class="d-flex flex-wrap justify-content-center">
+                        @foreach (var seat in Model.SeatsLower)
+                        {
+                            // Kiểm tra nếu cần đóng và mở một hàng mới
+                            if (count_low % 3 == 0 && count_low != 0)
+                            {
+                            @:</div> <!-- Đóng hàng cũ -->
+                            @:<div class="d-flex flex-wrap justify-content-center">
+                            }
+
+                            <!-- Tạo ghế -->
+                            <div class="seat-container me-2 mb-2">
+                                <i class="fs-4 fa-solid fa-couch seat available" data-seat="@seat"></i>
+                                <span class="seat-label d-block text-center">@seat</span>
+                            </div>
+                            count_low++;
+                        }
+                    </div> <!-- Đóng hàng cuối -->
+                </div>
+                <!-- Upper Deck -->
+                <div class="col-md-6 mb-3">
+                    <h6 class="text-center text-uppercase fw-bold">Tầng trên</h6>                  
+                    <div class="d-flex flex-wrap justify-content-center">
+                        @foreach (var seat in Model.SeatsUpper)
+                        {
+                            // Kiểm tra nếu cần đóng và mở một hàng mới
+                            if (count_up % 3 == 0 && count_up != 0)
+                            {
+                            @:</div> <!-- Đóng hàng cũ -->
+                            @:<div class="d-flex flex-wrap justify-content-center">
+                            }
+
+                            <!-- Tạo ghế -->
+                            <div class="seat-container me-2 mb-2">
+                                <i class="fs-4 fa-solid fa-couch seat available" data-seat="@seat"></i>
+                                <span class="seat-label d-block text-center">@seat</span>
+                            </div>
+                            count_up++;
+                        }
+                    </div> <!-- Đóng hàng cuối -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Booking Info -->
+        <div class="col-lg-3 col-md-10 me-5 ps-0 rounded">
+            <div class="card shadow border-0 mb-2">
+                <div class="card-body">                 
+                    <h5 class="card-title text-success">Thông tin lượt đi</h5>
+                    <p class="card-text">
+                        Tuyến xe: An Nhơn - Miền Đông Mới<br>
+                        Thời gian xuất bến: <span class="text-success">18:45 28/10/2024</span><br>
+                        Số lượng ghế: <span id="seatCount">0</span> Ghế<br>
+                        Số ghế: <span id="selectedSeats"></span><br>
+                        <span class="text-secondary">Tổng tiền lượt đi: <span id="totalPriceStart">0</span>đ</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card shadow border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Chi tiết giá</h5>
+                    <p class="card-text">
+                        Giá vé lượt đi: <span id="totalPriceTicket">0</span>đ<br>
+                        Phí thanh toán <span id="feePayment">0</span><br>
+                        <hr />
+                        <span class="text-secondary">Tổng tiền: <span id="totalPrice">0</span>đ</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Customer Info -->
+<div class="row mt-4">
+    <div class="col-lg-8 col-md-12 shadow p-4 ms-4 rounded">
+        <div class="row">
+            <div class="col-md-6">
+                <i class="fa-solid fa-user text-success"></i>
+                <span class="text-success">Thông tin khách hàng</span>
+                <form id="bookingForm">
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Họ và tên <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="fullName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Số điện thoại <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <button type="submit" class="btn text-light" style="background-color: #00b98e;">Đặt vé</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h6 class="text-danger fw-bold">ĐIỀU KHOẢN & LƯU Ý</h6>
+                <p class="text-black">
+                    (*) Quý khách vui lòng có mặt tại bến xuất phát của xe trước ít nhất 30 phút giờ xe khởi hành, mang theo thông báo đã thanh toán vé thành công có chứa mã vé được gửi từ hệ thống 2-T BUS LINE. Vui lòng liên hệ Trung tâm tổng đài 52200005 để được hỗ trợ.
+                </p>
+                <p class="text-black">
+                    (*) Nếu quý khách có nhu cầu trung chuyển, vui lòng liên hệ Tổng đài trung chuyển 1900 6918 trước khi đặt vé. Chúng tôi không đón/trung chuyển tại những điểm xe trung chuyển không thể tới được.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    /* Khung ghế nhỏ gọn hơn */
+    .seat-container {
+        width: 60px;
+        height: 60px;
+    }
+
+    .seat {
+        cursor: pointer; /* Hiện con trỏ tay */
+        color: #6c757d; /* Màu ghế có sẵn */
+        transition: color 0.3s, transform 0.3s;
+    }
+
+        .seat.available:hover {
+            color: #00b98e; /* Màu khi hover */
+            transform: scale(1.1); /* Hiệu ứng phóng to khi hover */
+        }
+
+        .seat.selected {
+            color: #ffc107; /* Màu khi được chọn */
+        }
+
+        .seat.sold {
+            color: #dc3545; /* Màu ghế đã bán */
+            cursor: not-allowed; /* Không thể chọn */
+        }
+
+    .seat-label {
+        font-size: 0.8rem; /* Giảm kích thước chữ */
+        color: #6c757d;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const seats = document.querySelectorAll('.seat');
+        const seatCount = document.getElementById('seatCount');
+        const selectedSeats = document.getElementById('selectedSeats');
+        const totalPrice = document.getElementById('totalPrice');
+
+        seats.forEach(seat => {
+            seat.addEventListener('click', () => {
+                if (seat.classList.contains('available')) {
+                    seat.classList.toggle('selected');
+                }
+                updateSeatInfo();
+            });
+        });
+
+        function updateSeatInfo() {
+            const selected = document.querySelectorAll('.seat.selected');
+            seatCount.textContent = selected.length;
+            selectedSeats.textContent = Array.from(selected).map(seat => seat.dataset.seat).join(', ');
+            totalPrice.textContent = selected.length * 100000; // Giá mỗi ghế
+        }
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const seats = document.querySelectorAll('.seat');
+        const seatCount = document.getElementById('seatCount');
+        const selectedSeats = document.getElementById('selectedSeats');
+        const totalPriceStart = document.getElementById('totalPriceStart');
+        const totalPriceTicket = document.getElementById('totalPriceTicket');
+        const totalPrice = document.getElementById('totalPrice');
+
+        seats.forEach(seat => {
+            seat.addEventListener('click', () => {
+                if (seat.classList.contains('available')) {
+                    seat.classList.replace('available', 'selected');
+                } else if (seat.classList.contains('selected')) {
+                    seat.classList.replace('selected', 'available');
+                }
+                updateSeatInfo();
+            });
+        });
+
+        function updateSeatInfo() {
+            const selected = document.querySelectorAll('.seat.selected');
+            seatCount.textContent = selected.length;
+            selectedSeats.textContent = Array.from(selected).map(seat => seat.dataset.seat).join(', ');
+            totalPriceStart.textContent = selected.length * 100000;
+            totalPriceTicket.textContent = selected.length * 100000;
+            totalPrice.textContent = selected.length * 100000;
+        }
+    });
+</script>

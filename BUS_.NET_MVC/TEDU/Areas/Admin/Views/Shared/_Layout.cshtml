@@ -95,9 +95,16 @@
                 Nhân Sự
             </div>
 
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"].ToString() == "Account" ? "active" : "")">
+                <a class="nav-link collapsed" href="@Url.Action("Index", "Account")">
+                    <i class="fas fa-user "></i>
+                    <span>Quản lý tài khoản</span>
+                </a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item @(ViewContext.RouteData.Values["controller"].ToString() == "TicketStaff" ? "active" : "")">
-                <a class="nav-link collapsed" href="@Url.Action("Index", "TicketStaff")">
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"].ToString() == "Staff" ? "active" : "")">
+                <a class="nav-link collapsed" href="@Url.Action("Index", "StaffTicket")">
                     <i class="fas fa-user "></i>
                     <span>Quản lý nhân viên</span>
                 </a>

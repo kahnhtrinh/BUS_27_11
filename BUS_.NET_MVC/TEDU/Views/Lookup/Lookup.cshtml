@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Lookup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <title>Tra cứu vé</title>
+    <!-- Bootstrap CSS -->
+   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .ticket-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .ticket-status.paid {
+            color: #28a745;
+        }
+
+        .ticket-status.unpaid {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Form Tra cứu vé -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow p-4">
+                    <h3 class="text-center mb-4 text-success">Tra cứu thông tin đặt vé</h3>
+                    <form id="searchForm" method="post">
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Số điện thoại</label>
+                            <input type="text" class="form-control" id="phone" placeholder="Nhập số điện thoại" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ticketCode" class="form-label">Mã vé</label>
+                            <input type="text" class="form-control" id="ticketCode" placeholder="Nhập mã vé" required>
+                        </div>
+                        <button type="submit" class="btn btn-secondary w-100">Tra cứu</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Lấy URL từ Razor
+        const ticketDetailUrl = '@Url.Action("TicketDetail", "Lookup")';
+
+        $('#searchForm').submit(function(event) {
+            event.preventDefault(); // Ngăn chặn submit form mặc định
+
+            // Chuyển hướng đến URL mới
+            window.location.href = ticketDetailUrl;
+        });
+    });
+    </script>
+
+</body>
+
+
+
+

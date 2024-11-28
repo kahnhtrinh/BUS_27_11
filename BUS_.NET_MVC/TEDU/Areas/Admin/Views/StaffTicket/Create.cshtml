@@ -1,0 +1,116 @@
+﻿@model TEDU.Areas.Admin.Models.StaffTicket
+
+@{
+    ViewBag.Title = "Create Staff";
+}
+@using (Html.BeginForm("Create", "StaffTicket", FormMethod.Post))
+{
+
+    <div class="container">
+        <h2>Tạo nhân viên</h2>
+
+        <form id="bookingForm">
+            @Html.AntiForgeryToken()
+
+            <!-- Chọn tuyến xe -->
+            <div class="form-group">
+                <label for="AccountId">Tài khoản cho nhân viên</label>
+                <select class="form-control" id="AccountId" name="AccountId" required>
+                    <option value="">-- Chọn tài khoản --</option>
+                    @foreach (var account in ViewBag.Accounts)
+                    {
+                        if (account.Role == "Nhân viên")
+                        {
+                            <option value="@account.Id">@account.Username - @account.Password</option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Name">Họ và Tên</label>
+                <input type="text" class="form-control" id="Name" name="Name" required />
+            </div>
+            <div class="form-group">
+                <label for="BirthDate">Ngày sinh</label>
+                <input type="date" class="form-control" id="BirthDate" name="BirthDate" required />
+            </div>
+            <div class="form-group">
+                <label for="PhoneNumber">Số điện thoại</label>
+                <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" required />
+                <span id="phoneError" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label for="EmailAddresss">Email</label>
+                <input type="email" class="form-control" id="EmailAddress" name="EmailAddress" required />
+                <span id="emailError" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label for="Image">Ảnh</label>
+                <input type="file" class="form-control" id="Image" name="Image" required />
+            </div>
+            <div class="form-group">
+                <label for="Role">Vai trò</label>
+                <input type="text" class="form-control" id="Role" name="Role" value="Nhân viên" readonly />
+            </div>
+            <div class="form-group">
+                <input type="text" hidden class="form-control" id="Status" name="Status" value="Đang làm" required />
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary btn-user btn-block" id="submitButton" disabled>Tạo nhân viên</button>
+            <a href="@Url.Action("Index", "StaffTicket")" class="btn btn-secondary btn-user btn-block">Quay lại</a>
+        </form>
+    </div>
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $('#PhoneNumber').on('input', function () {
+        var phoneNumber = $(this).val();
+
+        $.ajax({
+            url: '@Url.Action("CheckPhoneNumber", "StaffTicket")',
+            type: 'POST',
+            data: { phoneNumber: phoneNumber },
+            success: function (response) {
+                if (response.exists) {
+                    $('#phoneError').text('Số điện thoại đã tồn tại.');
+                    $('#submitButton').prop('disabled', true);
+                } else {
+                    $('#phoneError').text('');
+                    $('#submitButton').prop('disabled', false);
+                }
+            },
+            error: function () {
+                console.error('Error checking phone number');
+            }
+        });
+    });
+
+    $('#EmailAddress').on('input', function () {
+    var emailAddress = $(this).val();
+
+    $.ajax({
+        url: '@Url.Action("CheckEmail", "StaffTicket")',
+        type: 'POST',
+        data: { emailAddress: emailAddress },
+        success: function (response) {
+            if (response.exists) {
+                $('#emailError').text('Email đã tồn tại.');
+                $('#submitButton').prop('disabled', true);
+            } else {
+                $('#emailError').text('');
+                $('#submitButton').prop('disabled', false);
+            }
+        },
+        error: function () {
+            console.error('Error checking email');
+        }
+    });
+});
+
+</script>
+
+
+

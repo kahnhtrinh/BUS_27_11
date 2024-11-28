@@ -66,6 +66,15 @@
                 <span class="text">Thêm</span>
             </a>
         }
+        else if (ViewBag.PageType == "Account")
+        {
+            <a href="@Url.Action("Create", "Account")" class="btn btn-primary btn-icon-split">
+                <span class="icon text-white-100">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Thêm</span>
+            </a>
+        }
         else if (ViewBag.PageType == "Trip")
         {
 
@@ -100,6 +109,16 @@
         {
 
             <a href="@Url.Action("Create", "Ticket")" class="btn btn-primary btn-icon-split">
+                <span class="icon text-white-100">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Thêm</span>
+            </a>
+        }
+        else if (ViewBag.PageType == "Staff")
+        {
+
+            <a href="@Url.Action("Create", "StaffTicket")" class="btn btn-primary btn-icon-split">
                 <span class="icon text-white-100">
                     <i class="fas fa-plus"></i>
                 </span>
@@ -228,8 +247,8 @@
                                     }
 
                                     @*<a href="@Url.Action("CreateTrip", "Trip", new { routeId = data.BusRouteId })" class="btn btn-outline-danger">
-            <i class="fa-solid fa-circle-plus"></i>
-        </a>*@
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </a>*@
                                 </td>
                             </tr>
                         }
@@ -312,51 +331,72 @@
                             </tr>
                         }
                     }
-                    @*else if (ViewBag.PageType == "TicketStaff")
+                    else if (ViewBag.PageType == "Account")
+                    {
+                        foreach (var data in Model as List<Account>)
                         {
-                            foreach (var data in ViewBag.Data as List<TicketStaff>)
-                            {
-                                <tr>
-                                    <td>@data.EmployeeId</td>
-                                    <td>@data.FullName</td>
-                                    <td>@data.DateOfBirth</td>
-                                    <td>@data.PhoneNumber</td>
-                                    <td>@data.Email</td>
-                                    <td>@data.password</td>
-                                    <td>@data.Role</td>
-                                    <td>
-                                        <a href="@Url.Action("Edit", "TicketStaff")" class="btn btn-outline-info">
-                                            <i class="fas fa-wrench"></i>
-                                        </a>
-                                        <button class="btn btn-outline-danger">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            }
-                        }*@
+                            <tr>
+                                <td>@data.Id</td>
+                                <td>@data.Username</td>
+                                <td>@data.Password</td>
+                                <td>@data.CreatedDate</td>
+                                <td>@data.NameOfStaff</td>
+                                <td>@data.Role</td>
+                                
+                                <td class="d-flex justify-content-around">
+                                    <a href="@Url.Action("Update", "Account", new { id = data.Id })" class="btn btn-outline-info">
+                                        <i class="fas fa-wrench"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else if (ViewBag.PageType == "Staff")
+                    {
+                        foreach (var data in Model as List<StaffTicket>)
+                        {
+                            <tr>
+                                <td>@data.Id</td>
+                                <td>@data.Name</td>
+                                <td>@data.BirthDate</td>
+                                <td>@data.PhoneNumber</td>
+                                <td>@data.Username</td>
+                                <td>@data.Password</td>
+                                <td>@data.EmailAddress</td>
+                                <td>@data.Role</td>
+                                <td class="d-flex justify-content-around">
+                                    <a href="@Url.Action("Update", "StaffTicket", new { id = data.Id })" class="btn btn-outline-info">
+                                        <i class="fas fa-wrench"></i>
+                                    </a>
+                                    <a href="@Url.Action("Delete", "StaffTicket", new { id = data.Id })" class="btn btn-outline-danger">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    }
                     @*else if (ViewBag.PageType == "Contact")
-                        {
-                            foreach (var data in ViewBag.Data as List<Contact>)
-                            {
-                                <tr>
-                                    <td>@data.ContactId</td>
-                                    <td>@data.CustomerName</td>
-                                    <td>@data.Email</td>
-                                    <td>@data.Phone</td>
-                                    <td>@data.Message</td>
-                                    <td>@data.SentDate</td>
-                                    <td class="d-flex justify-content-around">
-                                        <a href="@Url.Action("Reply", "Contact")" class="btn btn-outline-info">
-                                            <i class="fas fa-comment-dots"></i>
-                                        </a>
-                                        <button class="btn btn-outline-danger">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            }
-                        }*@
+        {
+            foreach (var data in ViewBag.Data as List<Contact>)
+            {
+                <tr>
+                    <td>@data.ContactId</td>
+                    <td>@data.CustomerName</td>
+                    <td>@data.Email</td>
+                    <td>@data.Phone</td>
+                    <td>@data.Message</td>
+                    <td>@data.SentDate</td>
+                    <td class="d-flex justify-content-around">
+                        <a href="@Url.Action("Reply", "Contact")" class="btn btn-outline-info">
+                            <i class="fas fa-comment-dots"></i>
+                        </a>
+                        <button class="btn btn-outline-danger">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            }
+        }*@
                 </tbody>
             </table>
         </div>

@@ -232,6 +232,7 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\BusController.cs" />
     <Compile Include="Areas\Admin\Controllers\CoDriverController.cs" />
     <Compile Include="Areas\Admin\Controllers\ContactController.cs" />
@@ -242,8 +243,9 @@
     <Compile Include="Areas\Admin\Controllers\RouteController.cs" />
     <Compile Include="Areas\Admin\Controllers\StatisticController.cs" />
     <Compile Include="Areas\Admin\Controllers\TicketController.cs" />
-    <Compile Include="Areas\Admin\Controllers\TicketStaffController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StaffTicketController.cs" />
     <Compile Include="Areas\Admin\Controllers\TripController.cs" />
+    <Compile Include="Areas\Admin\Models\Account.cs" />
     <Compile Include="Areas\Admin\Models\Bus.cs" />
     <Compile Include="Areas\Admin\Models\CoDriver.cs" />
     <Compile Include="Areas\Admin\Models\Contact.cs" />
@@ -253,8 +255,9 @@
     <Compile Include="Areas\Admin\Models\RouteInfo.cs" />
     <Compile Include="Areas\Admin\Models\Seat.cs" />
     <Compile Include="Areas\Admin\Models\Ticket.cs" />
-    <Compile Include="Areas\Admin\Models\TicketStaff.cs" />
+    <Compile Include="Areas\Admin\Models\StaffTicket.cs" />
     <Compile Include="Areas\Admin\Models\Trip.cs" />
+    <Compile Include="Areas\Admin\Service\AccountAPIService.cs" />
     <Compile Include="Areas\Admin\Service\BusAPIService.cs" />
     <Compile Include="Areas\Admin\Service\EmployeeAPIService.cs" />
     <Compile Include="Areas\Admin\Service\RouteAPIService.cs" />
@@ -277,10 +280,16 @@
     <Compile Include="Areas\Staff\Models\TicketStaff.cs" />
     <Compile Include="Areas\Staff\Models\Trip.cs" />
     <Compile Include="Areas\Staff\StaffAreaRegistration.cs" />
+    <Compile Include="Controllers\BookingSeatController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LookupController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BookingSeat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2193,13 +2202,6 @@
     <Content Include="Content\img\testimonial-4.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\css\Site.css" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.esm.js" />
-    <Content Include="Scripts\bootstrap.esm.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Assets\Admin\scss\navs\_global.scss" />
     <Content Include="Assets\Admin\scss\navs\_sidebar.scss" />
     <Content Include="Assets\Admin\scss\navs\_topbar.scss" />
@@ -2372,8 +2374,6 @@
     <Content Include="Assets\Admin\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="Assets\Admin\vendor\jquery\jquery.min.map" />
     <Content Include="Assets\Admin\vendor\jquery\jquery.slim.min.map" />
-    <Content Include="Content\assets\css\main.map" />
-    <Content Include="Content\assets\css\style.map" />
     <Content Include="Areas\Admin\Views\CoDriver\Create.cshtml" />
     <Content Include="Areas\Admin\Views\CoDriver\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\CoDriver\Update.cshtml" />
@@ -2402,10 +2402,10 @@
     <Content Include="Areas\Admin\Views\Statistic\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Statistic\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Statistic\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\TicketStaff\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\TicketStaff\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\TicketStaff\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\TicketStaff\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\StaffTicket\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\StaffTicket\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\StaffTicket\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\StaffTicket\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Ticket\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Ticket\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Ticket\Edit.cshtml" />
@@ -2445,6 +2445,32 @@
     <Content Include="Areas\Admin\Views\Trip\CreateTrip.cshtml" />
     <Content Include="Areas\Admin\Views\Driver\GetDriversByRouteId.cshtml" />
     <Content Include="Areas\Admin\Views\CoDriver\GetCoDriversByRouteId.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\Create.cshtml" />
+    <Content Include="Content\assets\css\main.map" />
+    <Content Include="Content\assets\css\style.map" />
+    <Content Include="Content\css\bootstrap-grid.css.map" />
+    <Content Include="Content\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\css\bootstrap-utilities.css.map" />
+    <Content Include="Content\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\css\bootstrap.css.map" />
+    <Content Include="Content\css\bootstrap.min.css.map" />
+    <Content Include="Content\css\bootstrap.rtl.css.map" />
+    <Content Include="Content\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2456,6 +2482,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\js\main.js" />
+    <Content Include="Scripts\js\News.js" />
     <Content Include="Scripts\js\script.js" />
     <Content Include="Scripts\js\vi.js" />
     <Content Include="Scripts\lib\animate\animate.css" />
@@ -2490,41 +2517,35 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Scripts\lib\owlcarousel\LICENSE" />
-    <Content Include="Scripts\lib\waypoints\links.php" />
     <Content Include="Views\Home\News.cshtml" />
     <Content Include="Views\Home\Schedule.cshtml" />
     <Content Include="Views\Home\Lookup.cshtml" />
+    <Content Include="Views\Home\Signin.cshtml" />
+    <Content Include="Views\BookingSeat\BookingSeat.cshtml" />
+    <Content Include="Views\Contact\Contact.cshtml" />
+    <Content Include="Views\Lookup\Lookup.cshtml" />
+    <Content Include="Views\Lookup\TicketDetail.cshtml" />
+    <Content Include="Views\News\News.cshtml" />
+    <Content Include="Views\News\NewsDetail.cshtml" />
+    <Content Include="Views\Schedule\Schedule.cshtml" />
+    <Content Include="Views\Schedule\ScheduleAll.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\NewsDetail\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\css\bootstrap.rtl.min.css.map" />
-    <Content Include="Content\css\bootstrap.rtl.css.map" />
-    <Content Include="Content\css\bootstrap.min.css.map" />
-    <Content Include="Content\css\bootstrap.css.map" />
-    <Content Include="Content\css\bootstrap-utilities.rtl.min.css.map" />
-    <Content Include="Content\css\bootstrap-utilities.rtl.css.map" />
-    <Content Include="Content\css\bootstrap-utilities.min.css.map" />
-    <Content Include="Content\css\bootstrap-utilities.css.map" />
-    <Content Include="Content\css\bootstrap-reboot.rtl.min.css.map" />
-    <Content Include="Content\css\bootstrap-reboot.rtl.css.map" />
-    <Content Include="Content\css\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\css\bootstrap-reboot.css.map" />
-    <Content Include="Content\css\bootstrap-grid.rtl.min.css.map" />
-    <Content Include="Content\css\bootstrap-grid.rtl.css.map" />
-    <Content Include="Content\css\bootstrap-grid.min.css.map" />
-    <Content Include="Content\css\bootstrap-grid.css.map" />
     <None Include="packages.config" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
-    <Content Include="Scripts\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap.esm.min.js.map" />
-    <Content Include="Scripts\bootstrap.esm.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\lib\owlcarousel\LICENSE" />
+    <Content Include="Scripts\lib\waypoints\links.php" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

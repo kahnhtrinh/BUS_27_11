@@ -41,6 +41,26 @@ namespace TEDU.Services
             }
         }
 
+        //Lấy nhân viên dựa vào mã
+        public async Task<StaffTicket> GetStaffByIdAsync(int id)
+        {
+            try
+            {
+                var response = await _httpClient.GetAsync($"Employee/GetStaffById/{id}");
+
+                response.EnsureSuccessStatusCode();
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var staff = JsonConvert.DeserializeObject<StaffTicket>(jsonResponse);
+
+                return staff;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Không tìm thấy nhân viên với mã {id}: {ex.Message}");
+                throw;
+            }
+        }
+
         // Lấy danh sách tài xế dựa trên Id của route
         public async Task<List<Driver>> GetDriversByRouteIdAsync(int routeId)
         {
@@ -50,6 +70,17 @@ namespace TEDU.Services
             var jsonResponse = await response.Content.ReadAsStringAsync();
             var drivers = JsonConvert.DeserializeObject<List<Driver>>(jsonResponse);
             return drivers;
+        }
+
+        //Lấy danh sách nahan viên dựa vào ID tài khoản
+        public async Task<StaffTicket> GetStaffByAccountIdAsync(int accountId)
+        {
+            var response = await _httpClient.GetAsync($"Employee/GetStaffByAccountId/{accountId}");
+            response.EnsureSuccessStatusCode();
+
+            var jsonResponse = await response.Content.ReadAsStringAsync();
+            var staff = JsonConvert.DeserializeObject<StaffTicket>(jsonResponse);
+            return staff;
         }
 
         //Lấy danh sách tài xế
@@ -63,11 +94,35 @@ namespace TEDU.Services
             return null;
         }
 
+        //Lấy danh sách tài xế
+        public async Task<List<StaffTicket>> GetStaffsAsync()
+        {
+            var response = await _httpClient.GetAsync("Employee/GetStaffs");
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadFromJsonAsync<List<StaffTicket>>();
+            }
+            return null;
+        }
+
         // Tạo tài xế mới
         public async Task<string> CreateDriverAsync(Driver newDriver)
         {
             var content = new StringContent(JsonConvert.SerializeObject(newDriver), Encoding.UTF8, "application/json");
             var response = await _httpClient.PostAsync("Employee/PostDriver", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return "Create successfully";
+            }
+            return await response.Content.ReadAsStringAsync();
+        }
+
+        //Tạo nhân viên
+        public async Task<string> CreateStaffAsync(StaffTicket newStaff)
+        {
+            var content = new StringContent(JsonConvert.SerializeObject(newStaff), Encoding.UTF8, "application/json");
+            var response = await _httpClient.PostAsync("Employee/CreateStaff", content);
 
             if (response.IsSuccessStatusCode)
             {
@@ -168,10 +223,34 @@ namespace TEDU.Services
             return await response.Content.ReadAsStringAsync();
         }
 
+        //Cập nhật nhân viên
+        public async Task<string> UpdateStaffAsync(int staffId, StaffTicket staff)
+        {
+            var content = new StringContent(JsonConvert.SerializeObject(staff), Encoding.UTF8, "application/json");
+            var response = await _httpClient.PutAsync($"Employee/PutStaff/{staffId}", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return "Update successfully";
+            }
+            return await response.Content.ReadAsStringAsync();
+        }
+
         // Xóa tài xế
         public async Task<string> DeleteCoDriverAsync(int codriverId)
         {
             var response = await _httpClient.DeleteAsync($"Employee/DeleteCoDriver/{codriverId}");
+            if (response.IsSuccessStatusCode)
+            {
+                return "Delete successfully";
+            }
+            return await response.Content.ReadAsStringAsync();
+        }
+
+        //Xóa nhân viên
+        public async Task<string> DeleteStaffAsync(int staffId)
+        {
+            var response = await _httpClient.DeleteAsync($"Employee/DeleteStaff/{staffId}");
             if (response.IsSuccessStatusCode)
             {
                 return "Delete successfully";

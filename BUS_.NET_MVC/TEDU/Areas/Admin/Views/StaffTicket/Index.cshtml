@@ -1,0 +1,8 @@
+﻿@model IEnumerable<TEDU.Areas.Admin.Models.StaffTicket>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    ViewBag.Headers = new List<string> { "ID", "Họ Tên", "Ngày sinh", "Số điện thoại", "Tên đăng nhập", "Mật khẩu", "Email", "Vai trò" };
+}
+
+@Html.Partial("_Table")
+

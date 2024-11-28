@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewBag.Title = "NewsDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết Tin Tức</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .news-title {
+            color: #00b98e;
+            font-size: 2rem;
+        }
+
+        .news-meta {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .news-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .related-news img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .related-news .news-item {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+            .related-news .news-item:last-child {
+                border-bottom: none;
+            }
+    </style>
+</head>
+
+    <!-- Header Start -->
+    <div class="container-fluid header bg-white p-0">
+        <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+            <div class="col-md-6 p-5 mt-lg-5">
+            </div>
+        </div>
+    </div>
+    <!-- News Detail Section -->
+    <section class="news-detail py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <h2 class="news-title mb-3">Ra mắt dòng xe mới Lamborghini Bus</h2>
+                    <p class="news-meta">
+                        <i class="fas fa-calendar-alt"></i> Ngày đăng: 22/10/2024
+
+                    </p>
+                    <img src="https://i.ytimg.com/vi/CQCP6xNA1Hc/maxresdefault.jpg" class="news-image my-4" alt="Lamborghini Bus">
+                    <p>
+                        **Lamborghini Bus** đã chính thức ra mắt, mở ra một định nghĩa mới về vận tải hạng sang.
+                        Với thiết kế hiện đại, nội thất sang trọng và các tính năng thông minh, dòng xe này sẽ
+                        mang đến cho hành khách một trải nghiệm hoàn toàn khác biệt.
+                    </p>
+                    <p>
+                        Chiếc xe này được trang bị động cơ tiên tiến, khả năng tiết kiệm nhiên liệu, và
+                        thân thiện với môi trường. Ngoài ra, hệ thống giải trí đa phương tiện trên xe cũng
+                        được tích hợp để đáp ứng nhu cầu của mọi hành khách.
+                    </p>
+                    <p>
+                        Dự kiến dòng xe này sẽ sớm có mặt tại các tuyến đường trọng điểm như Hà Nội - TP. HCM,
+                        Đà Nẵng - Nha Trang, mang lại sự tiện lợi và đẳng cấp cho hành khách trong và ngoài nước.
+                    </p>
+                    <img src="https://i.ytimg.com/vi/CQCP6xNA1Hc/maxresdefault.jpg" class="news-image my-4" alt="Lamborghini Bus">
+                    <p>
+                        Lamborghini Bus: Biểu Tượng Của Sự Kết Hợp Độc Đáo Giữa Phong Cách và Hiệu Suất
+                        Khám phá sự đột phá mới nhất trong ngành công nghiệp ô tô - Lamborghini Bus.
+                        Kết hợp giữa thiết kế thể thao đậm chất Lamborghini và tiện nghi vượt trội, chiếc xe này không chỉ là phương tiện di chuyển mà còn là biểu tượng của đẳng cấp và sự tinh tế.
+                        Với động cơ mạnh mẽ và nội thất sang trọng, Lamborghini Bus mang đến trải nghiệm di chuyển hoàn toàn mới, thách thức mọi giới hạn của phong cách và hiệu suất.
+                    </p>
+                </div>
+
+                <!-- Sidebar: Related News -->
+                <div class="col-lg-4">
+                    <h4 class="mb-4">Tin tức liên quan</h4>
+                    <div class="related-news">
+                        <div class="news-item d-flex">
+                            <img src="https://busmap.vn/wp-content/uploads/2023/03/IMG_2588.jpg" alt="">
+                            <div class="ms-3">
+                                <h6><a href="@Url.Action("NewsDetail", "News")" class="text-dark">Nâng cấp dòng xe giường nằm Limousine</a></h6>
+                                <p class="news-meta"><i class="fas fa-calendar-alt"></i> 21/10/2024</p>
+                            </div>
+                        </div>
+                        <div class="news-item d-flex">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9_OfDku3Qscjbv0aKlCzIYh2DzUddK8rYQ&s" alt="">
+                            <div class="ms-3">
+                                <h6><a href="@Url.Action("NewsDetail", "News")" class="text-dark">Mở rộng tuyến đường Hà Nội - Đà Nẵng</a></h6>
+                                <p class="news-meta"><i class="fas fa-calendar-alt"></i> 20/10/2024</p>
+                            </div>
+                        </div>
+                        <div class="news-item d-flex">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY38FSOsxP2LX28cWE44Px--iTwmSRFulvmg&s" alt="">
+                            <div class="ms-3">
+                                <h6><a href="@Url.Action("NewsDetail", "News")" class="text-dark">Ứng dụng công nghệ trong vận tải</a></h6>
+                                <p class="news-meta"><i class="fas fa-calendar-alt"></i> 19/10/2024</p>
+                            </div>
+                        </div>
+                        <div class="news-item d-flex">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVYJR7gvT5E7gWyAVKmrf7VKjxspui8kkVsQ&s" alt="">
+                            <div class="ms-3">
+                                <h6><a href="@Url.Action("NewsDetail", "News")" class="text-dark">Khai trương tuyến xe liên tỉnh mới</a></h6>
+                                <p class="news-meta"><i class="fas fa-calendar-alt"></i> 18/10/2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+
