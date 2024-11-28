@@ -29,36 +29,56 @@ namespace TEDU
             routes.MapRoute(
                 name: "Contact",
                 url: "lien-he/{id}",
-                defaults: new { controller = "Home", action = "Contact", id = UrlParameter.Optional },
+                defaults: new { controller = "Contact", action = "Contact", id = UrlParameter.Optional },
                 namespaces: new[] { "TEDU.Controllers" }
             );
-
             routes.MapRoute(
-                name: "Schedule",
-                url: "chi-tiet-lich-trinh/{id}",
-                defaults: new { controller = "Home", action = "Schedule", id = UrlParameter.Optional },
+                name: "NewsDetail",
+                url: "tin-tuc/chi-tiet-tin-tuc/{id}",
+                defaults: new { controller = "News", action = "NewsDetail", id = UrlParameter.Optional },
                 namespaces: new[] { "TEDU.Controllers" }
             );
-
             routes.MapRoute(
                 name: "News",
                 url: "tin-tuc/{id}",
-                defaults: new { controller = "Home", action = "News", id = UrlParameter.Optional },
+                defaults: new { controller = "News", action = "News", id = UrlParameter.Optional },
                 namespaces: new[] { "TEDU.Controllers" }
             );
 
             routes.MapRoute(
-                name: "Lookup",
-                url: "tra-cuu-ve/{id}",
-                defaults: new { controller = "Home", action = "Lookup", id = UrlParameter.Optional },
+                name: "TicketDetail",
+                url: "tra-cuu-ve/thong-tin-chi-tiet-ve/{id}",
+                defaults: new { controller = "Lookup", action = "TicketDetail", id = UrlParameter.Optional },
                 namespaces: new[] { "TEDU.Controllers" }
             );
             routes.MapRoute(
-                name: "ScheduleAll",
-                url: "lich-trinh/{id}",
-                defaults: new { controller = "Home", action = "ScheduleAll", id = UrlParameter.Optional },
+                name: "Lookup",
+                url: "tra-cuu-ve/{id}",
+                defaults: new { controller = "Lookup", action = "Lookup", id = UrlParameter.Optional },
                 namespaces: new[] { "TEDU.Controllers" }
             );
+
+            
+
+            routes.MapRoute(
+               name: "Schedule",
+               url: "lich-trinh/chi-tiet-lich-trinh/{id}",
+               defaults: new { controller = "Schedule", action = "Schedule", id = UrlParameter.Optional },
+               namespaces: new[] { "TEDU.Controllers" }
+            );
+            routes.MapRoute(
+                name: "ScheduleAll",
+                url: "lich-trinh/{id}", 
+                defaults: new { controller = "Schedule", action = "ScheduleAll", id = UrlParameter.Optional },
+                namespaces: new[] { "TEDU.Controllers" }
+            );
+            routes.MapRoute(
+                name: "BookingSeat",
+                url: "dat-ve/{id}",
+                defaults: new { controller = "BookingSeat", action = "BookingSeat", id = UrlParameter.Optional },
+                namespaces: new[] { "TEDU.Controllers" }
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

@@ -277,10 +277,16 @@
     <Compile Include="Areas\Staff\Models\TicketStaff.cs" />
     <Compile Include="Areas\Staff\Models\Trip.cs" />
     <Compile Include="Areas\Staff\StaffAreaRegistration.cs" />
+    <Compile Include="Controllers\BookingSeatController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LookupController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BookingSeat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2135,6 +2141,7 @@
     <Content Include="Content\assets\js\jquery.validate.min.js" />
     <Content Include="Content\assets\js\mail-script.js" />
     <Content Include="Content\assets\js\main.js" />
+    <Content Include="Scripts\js\News.js" />
     <Content Include="Content\assets\js\one-page-nav-min.js" />
     <Content Include="Content\assets\js\owl.carousel.min.js" />
     <Content Include="Content\assets\js\plugins.js" />
@@ -2487,14 +2494,17 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Contact\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\lib\owlcarousel\LICENSE" />
     <Content Include="Scripts\lib\waypoints\links.php" />
-    <Content Include="Views\Home\News.cshtml" />
-    <Content Include="Views\Home\Schedule.cshtml" />
-    <Content Include="Views\Home\Lookup.cshtml" />
-    <Content Include="Views\Home\ScheduleAll.cshtml" />
+    <Content Include="Views\News\News.cshtml" />
+    <Content Include="Views\Schedule\Schedule.cshtml" />
+    <Content Include="Views\Lookup\Lookup.cshtml" />
+    <Content Include="Views\Schedule\ScheduleAll.cshtml" />
+    <Content Include="Views\BookingSeat\BookingSeat.cshtml" />
+    <Content Include="Views\Lookup\TicketDetail.cshtml" />
+    <Content Include="Views\News\NewsDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

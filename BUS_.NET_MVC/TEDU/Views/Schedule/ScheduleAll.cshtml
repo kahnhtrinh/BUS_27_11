@@ -1,0 +1,297 @@
+﻿@{
+    ViewBag.Title = "ScheduleAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Header Start -->
+<div class="container-fluid header bg-white p-0">
+    <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+        <div class="col-md-6 p-5 mt-lg-5">
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
+    <div class="container">
+        <!-- Hàng ngang chứa các ô nhập liệu -->
+        <div class="row g-2 justify-content-center">
+            <div class="col-md-4">
+                <input type="text" class="form-control border-2 py-3" placeholder="Điểm đi">
+            </div>
+            <div class="col-md-1 d-flex justify-content-center align-items-center">
+                <button class="btn border-0">
+                    <i class="bi bi-arrow-left-right fa-2x text-white"></i>
+                </button>
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control border-2 py-3" placeholder="Điểm đến">
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control border-2 py-3 datetimepicker-input" placeholder="Chọn ngày đi" id="dayTo" />
+            </div>
+        </div>
+        <!-- Nút Search nằm ở giữa phía dưới -->
+        <div class="row mt-3 justify-content-center">
+            <div class="col-md-4">
+                <button class="btn btn-dark border-0 w-100 py-3">Tìm kiếm </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <h2 class="mb-4 text-center  fw-bold bg-primary text-white rounded">Lịch trình các tuyến xe</h2>
+    <div class="accordion" id="scheduleAccordion">
+        <!-- Điểm xuất phát 1 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                    Điểm xuất phát: An Nhơn
+                </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#scheduleAccordion">
+                <div class="accordion-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Điểm đến</th>
+                                <th>Loại xe</th>
+                                <th>Quãng đường</th>
+                                <th>Thời gian hành trình</th>
+                                <th>Giá vé</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TP. Hồ Chí Minh</td>
+                                <td>Limousine</td>
+                                <td>639km</td>
+                                <td>11 giờ 30 phút</td>
+                                <td>300,000 VNĐ</td>
+                                <td>
+                                    <a href="@Url.Action("Schedule", "Schedule")" class="btn btn-outline-success btn-sm">
+                                        Tìm chuyến xe
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Đà Nẵng</td>
+                                <td>Limousine</td>
+                                <td>720km</td>
+                                <td>12 giờ 15 phút</td>
+                                <td>400,000 VNĐ</td>
+                                <td>
+                                    <a href="@Url.Action("Schedule", "Schedule")" class="btn btn-outline-success btn-sm">
+                                        Tìm chuyến xe
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Điểm xuất phát 2 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                    Điểm xuất phát: Quy Nhơn
+                </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#scheduleAccordion">
+                <div class="accordion-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Điểm đến</th>
+                                <th>Loại xe</th>
+                                <th>Quãng đường</th>
+                                <th>Thời gian hành trình</th>
+                                <th>Giá vé</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TP. Hồ Chí Minh</td>
+                                <td>Limousine</td>
+                                <td>620km</td>
+                                <td>10 giờ 50 phút</td>
+                                <td>280,000 VNĐ</td>
+                                <td>
+                                    <a href="@Url.Action("Schedule", "Schedule")" class="btn btn-outline-success btn-sm">
+                                        Tìm chuyến xe
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hà Nội</td>
+                                <td>Limousine</td>
+                                <td>1,050km</td>
+                                <td>16 giờ 30 phút</td>
+                                <td>800,000 VNĐ</td>
+                                <td>
+                                    <a href="@Url.Action("Schedule", "Schedule")" class="btn btn-outline-success btn-sm">
+                                        Tìm chuyến xe
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Điểm xuất phát 3 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                    Điểm xuất phát: TP. Hồ Chí Minh
+                </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#scheduleAccordion">
+                <div class="accordion-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Điểm đến</th>
+                                <th>Loại xe</th>
+                                <th>Quãng đường</th>
+                                <th>Thời gian hành trình</th>
+                                <th>Giá vé</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Đà Lạt</td>
+                                <td>Limousine</td>
+                                <td>620km</td>
+                                <td>10 giờ 50 phút</td>
+                                <td>280,000 VNĐ</td>
+                                <td>
+                                    <a href="@Url.Action("Schedule", "Schedule")" class="btn btn-outline-success btn-sm">
+                                        Tìm chuyến xe
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cần Thơ</td>
+                                <td>Limousine</td>
+                                <td>1,050km</td>
+                                <td>16 giờ 30 phút</td>
+                                <td>800,000 VNĐ</td>
+                                <td>
+                                    <a href="@Url.Action("Schedule", "Schedule")" class="btn btn-outline-success btn-sm">
+                                        Tìm chuyến xe
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Điểm xuất phát 4 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                    Điểm xuất phát: Trà Vinh
+                </button>
+            </h2>
+            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#scheduleAccordion">
+                <div class="accordion-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Điểm đến</th>
+                                <th>Loại xe</th>
+                                <th>Quãng đường</th>
+                                <th>Thời gian hành trình</th>
+                                <th>Giá vé</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TP. Hồ Chí Minh</td>
+                                <td>Limousine</td>
+                                <td>620km</td>
+                                <td>10 giờ 50 phút</td>
+                                <td>280,000 VNĐ</td>
+                                <td>
+                                    <a href="@Url.Action("Schedule", "Schedule")" class="btn btn-outline-success btn-sm">
+                                        Tìm chuyến xe
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Vũng Tàu</td>
+                                <td>Limousine</td>
+                                <td>1,050km</td>
+                                <td>16 giờ 30 phút</td>
+                                <td>800,000 VNĐ</td>
+                                <td>
+                                    <a href="@Url.Action("Schedule", "Schedule")" class="btn btn-outline-success btn-sm">
+                                        Tìm chuyến xe
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Điểm xuất phát 5 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                    Điểm xuất phát: Bến Tre
+                </button>
+            </h2>
+            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#scheduleAccordion">
+                <div class="accordion-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Điểm đến</th>
+                                <th>Loại xe</th>
+                                <th>Quãng đường</th>
+                                <th>Thời gian hành trình</th>
+                                <th>Giá vé</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cà Mau</td>
+                                <td>Limousine</td>
+                                <td>620km</td>
+                                <td>10 giờ 50 phút</td>
+                                <td>280,000 VNĐ</td>
+                                <td>
+                                    <a href="@Url.Action("Schedule", "Schedule")" class="btn btn-outline-success btn-sm">
+                                        Tìm chuyến xe
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Đồng Nai</td>
+                                <td>Limousine</td>
+                                <td>1,050km</td>
+                                <td>16 giờ 30 phút</td>
+                                <td>800,000 VNĐ</td>
+                                <td>
+                                    <a href="@Url.Action("Schedule", "Schedule")" class="btn btn-outline-success btn-sm">
+                                        Tìm chuyến xe
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
